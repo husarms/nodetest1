@@ -1,0 +1,93 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='shortcut icon' href='favicon.ico')
+    //-Web Fonts
+    link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin')
+    //-CSS Global Compulsory
+    link(rel='stylesheet', href='/plugins/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //-CSS Header and Footer
+    link(rel='stylesheet', href='/stylesheets/header-default.css')
+    link(rel='stylesheet', href='/stylesheets/footer-v1.css')
+    //-CSS Implementing Plugins
+    link(rel='stylesheet', href='/stylesheets/plugins/animate.css')
+    link(rel='stylesheet', href='/plugins/line-icons/line-icons.css')
+    link(rel='stylesheet', href='/plugins/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/plugins/owl-carousel/owl-carousel/owl.carousel.css')
+    link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/css/sky-forms.css')
+    link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css')
+    <!--[if lt IE 9]><link rel="stylesheet" href="/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+    //-CSS Page Style
+    link(rel='stylesheet', href='/stylesheets/pages/page_search.css')
+    //-CSS Theme
+    link(rel='stylesheet', href='/stylesheets/theme-colors/teal.css')
+    link(rel='stylesheet', href='/stylesheets/theme-skins/dark.css')
+  body.dark
+    #wrapper.wrapper
+      #header.header
+        #container.container
+          a.logo(href='/')
+            img(src='/images/logo1-default.png',alt='logo')
+          button.navbar-toggle(type='button',data-toggle='collapse',data-target=".navbar-responsive-collapse")
+            span.sr-only.
+              Toggle Navigation
+            span.fa.fa-bars
+        #navbar.collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
+          #navbar-container.container
+            ul.nav.navbar-nav
+              li.dropdown
+                a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown').
+                  Menu 1
+                ul.dropdown-menu
+                  li
+                    a(href='blog').
+                      Blog
+                  li.dropdown-submenu
+                    a(href='#').
+                      Option 2
+                    ul.dropdown-menu
+                      li
+                        a(href='#').
+                          Sub-option 1
+                      li
+                        a(href='#').
+                          Sub-option 2
+              li.dropdown
+                a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown').
+                  Menu 2
+                ul.dropdown-menu
+                  li
+                    a(href='#').
+                      Option 1
+                    a(href='#').
+                      Option 2
+
+    block navbar
+    block content
+
+    //-JS Global Compulsory
+    script(type='text/javascript',src='/plugins/jquery/jquery.min.js')
+    script(type='text/javascript',src='/plugins/jquery/jquery-migrate.min.js')
+    script(type='text/javascript',src='/plugins/bootstrap/js/bootstrap.min.js')
+    //-JS Implementing Plugins
+    script(type='text/javascript',src='/plugins/back-to-top.js')
+    script(type='text/javascript',src='/plugins/smoothScroll.js')
+    script(type='text/javascript',src='/plugins/jquery.parallax.js')
+    script(type='text/javascript',src='/plugins/owl-carousel/owl-carousel/owl.carousel.js')
+    //-JS Page Level
+    script(type='text/javascript',src='/plugins/app.js')
+    script(type='text/javascript',src='/plugins/owl-carousel.js')
+    script(type='text/javascript').
+      jQuery(document).ready(function(){
+        App.init();
+      });
+    <!--[if lt IE 9]>
+    <script src="/plugins/respond.js"></script>
+    <script src="/plugins/html5shiv.js"></script>
+    <script src="/plugins/placeholder-IE-fixes.js"></script>
+    <![endif]-->
+    block script

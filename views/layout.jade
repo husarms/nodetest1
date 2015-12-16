@@ -31,7 +31,7 @@ html
       #header.header
         #container.container
           a.logo(href='/')
-            img(src='/images/logo1-default.png',alt='logo')
+            img(src='/images/logo-matthusar.png',alt='logo',width='200px',height='36px')
           button.navbar-toggle(type='button',data-toggle='collapse',data-target=".navbar-responsive-collapse")
             span.sr-only.
               Toggle Navigation
@@ -39,6 +39,22 @@ html
         #navbar.collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
           #navbar-container.container
             ul.nav.navbar-nav
+              li
+                a(href='/') Home
+              li
+                a(href='/') Portfolio
+              li
+                a(href='blog') Blog
+              li.dropdown
+                a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown') Gallery
+                ul.dropdown-menu
+                  li
+                    a(href='#') Las Vegas
+                    a(href='#') San Francisco
+                    a(href='#') Los Angeles
+                    a(href='#') Japan
+              li
+                a(href='#') Contact
               li.dropdown
                 a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown').
                   Menu 1
@@ -61,10 +77,8 @@ html
                   Menu 2
                 ul.dropdown-menu
                   li
-                    a(href='#').
-                      Option 1
-                    a(href='#').
-                      Option 2
+                    a(href='#') Option 1
+                    a(href='#') Option 2
 
     block navbar
     block content

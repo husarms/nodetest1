@@ -18,9 +18,10 @@ html
     link(rel='stylesheet', href='/plugins/line-icons/line-icons.css')
     link(rel='stylesheet', href='/plugins/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='/plugins/owl-carousel/owl-carousel/owl.carousel.css')
-    link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/css/sky-forms.css')
-    link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css')
-    <!--[if lt IE 9]><link rel="stylesheet" href="/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+    //-link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/css/sky-forms.css')
+    //-link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css')
+    link(rel='stylesheet', href='/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css')
+    //-<!--[if lt IE 9]><link rel="stylesheet" href="/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
     //-CSS Page Style
     link(rel='stylesheet', href='/stylesheets/pages/page_search.css')
     link(rel='stylesheet', href='/stylesheets/pages/portfolio-v2.css')
@@ -56,7 +57,7 @@ html
                     a(href='/gallery/los-angeles') Los Angeles
                     a(href='/gallery/japan') Japan
               li
-                a(href='/contact') Contact
+                a(href='/about-me') About Me
               //-li.dropdown
               //-  a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown').
               //-    Menu 1
@@ -94,15 +95,20 @@ html
     script(type='text/javascript',src='/plugins/smoothScroll.js')
     script(type='text/javascript',src='/plugins/jquery.parallax.js')
     script(type='text/javascript',src='/plugins/jquery.mixitup.min.js')
+    script(type='text/javascript',src='/plugins/jquery-appear.js')
     script(type='text/javascript',src='/plugins/owl-carousel/owl-carousel/owl.carousel.js')
+    script(type='text/javascript',src='/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js')
     //-JS Page Level
     script(type='text/javascript',src='/plugins/app.js')
     script(type='text/javascript',src='/plugins/owl-carousel.js')
     script(type='text/javascript',src='/javascripts/pages/page_portfolio.js')
+    script(type='text/javascript',src='/plugins/progress-bar.js')
+    script(type='text/javascript',src='/javascripts/plugins/cube-portfolio/cube-portfolio-lightbox.js')
     script(type='text/javascript').
       jQuery(document).ready(function(){
         App.init();
         PortfolioPage.init();
+        ProgressBar.initProgressBarHorizontal();
       });
     <!--[if lt IE 9]>
     <script src="/plugins/respond.js"></script>

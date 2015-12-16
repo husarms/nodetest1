@@ -13,7 +13,7 @@
   overflow: hidden;
   padding: 10px 0 6px;
   border-bottom: solid 1px #eee;
-  background: url(../img/patterns/breadcrumbs.png) repeat;
+  background: url(../images/patterns/breadcrumbs.png) repeat;
 }
 
 .breadcrumbs h1 {
@@ -114,7 +114,7 @@
 .breadcrumbs-v1 {
   padding: 100px 0;
   position: relative;
-  background: url(../img/breadcrumbs/img1.jpg) center no-repeat;
+  background: url(../images/breadcrumbs/img1.jpg) center no-repeat;
   background-size: cover; /*Scales the background image to be as large as possible*/
 }
 
@@ -165,7 +165,7 @@
 .breadcrumbs-v2 {
   text-align: center;
   position: relative;
-  background: url(../img/bg/11.jpg) no-repeat center;
+  background: url(../images/bg/11.jpg) no-repeat center;
 }
 
 .breadcrumbs-v2-in {
@@ -205,19 +205,19 @@
 }
 
 .breadcrumbs-v3.img-v1 {
-  background: url(../img/breadcrumbs/img1.jpg) no-repeat;
+  background: url(../images/breadcrumbs/img1.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .breadcrumbs-v3.img-v2 {
-  background: url(../img/breadcrumbs/img2.jpg) no-repeat;
+  background: url(../images/breadcrumbs/img2.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .breadcrumbs-v3.img-v3 {
-  background: url(../img/breadcrumbs/img3.jpg) no-repeat;
+  background: url(../images/breadcrumbs/img3.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -1465,7 +1465,7 @@
 .call-action-v2 {
   padding: 50px 0;
   text-align: center;
-  background: url(../img/patterns/16.png);
+  background: url(../images/patterns/16.png);
 }
 
 .call-action-v2 h2 {
@@ -1815,7 +1815,7 @@
   height: auto;
   padding: 50px 0;
   position: relative;
-  background: url(../img/bg/11.jpg) repeat fixed; 
+  background: url(../images/bg/11.jpg) repeat fixed;
 }
 
 .bg-image-v1:before {
@@ -1835,7 +1835,7 @@
   height: auto;
   padding: 50px 0;
   position: relative;
-  background: url(../img/bg/7.jpg) repeat fixed;
+  background: url(../images/bg/7.jpg) repeat fixed;
 }
 
 .bg-image-v2:before {
@@ -1871,7 +1871,7 @@
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;
+  background: url(../images/team/faces.jpg) 50% 0 repeat fixed;
 }
 
 .parallax-quote:after {
@@ -1891,7 +1891,7 @@
   height: 100%; 
   content: " ";
   position: absolute;
-  background: url(../img/patterns/gridtile.png) repeat;
+  background: url(../images/patterns/gridtile.png) repeat;
 }
 
 /*Parallax Quote Inner*/
@@ -1978,7 +1978,7 @@
 /*Parallax Team
 ------------------------------------*/
 .parallax-team {
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;  
+  background: url(../images/team/faces.jpg) 50% 0 repeat fixed;
 }
 
 .parallax-team,
@@ -1999,7 +1999,7 @@
 
 /*Parallax Team*/
 .parallax-team {
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;  
+  background: url(../images/team/faces.jpg) 50% 0 repeat fixed;
 }
 
 .parallax-team,
@@ -2014,14 +2014,14 @@
 /*Parallax Counter
 ------------------------------------*/
 .parallax-bg {
-  background: url(../img/patterns/5.png) repeat fixed;
+  background: url(../images/patterns/5.png) repeat fixed;
 }
 
 /*Parallax Counter
 ------------------------------------*/
 .parallax-counter {
   padding: 30px 0;
-  background: url(../img/patterns/5.png) repeat fixed;
+  background: url(../images/patterns/5.png) repeat fixed;
 }
 
 .parallax-counter .counters {
@@ -2043,7 +2043,7 @@
 ------------------------------------*/
 .parallax-counter-v1 {
   padding: 60px 0;
-  background: url(../img/patterns/5.png) repeat fixed;
+  background: url(../images/patterns/5.png) repeat fixed;
 }
 
 .parallax-counter-v1 .counters {
@@ -2068,7 +2068,7 @@
 .parallax-counter-v2 {
   position: relative;
   padding: 80px 0 60px;
-  background: url(../img/patterns/16.png) repeat fixed;
+  background: url(../images/patterns/16.png) repeat fixed;
 }
 
 .parallax-counter-v2:after {
@@ -2129,7 +2129,7 @@
     overflow: hidden;
     text-align: center;
     position: relative;
-    background: url(../img/bg/25.jpg) 50% 0 fixed;
+    background: url(../images/bg/25.jpg) 50% 0 fixed;
 }
 
 .parallax-counter-v3:after {
@@ -2212,7 +2212,7 @@
   overflow: hidden;
   text-align: center;
   position: relative;
-  background: url(../img/bg/19.jpg) 50% 0 fixed;
+  background: url(../images/bg/19.jpg) 50% 0 fixed;
 }
 
 .parallax-counter-v4:after {
@@ -2252,7 +2252,7 @@
 ------------------------------------*/
 .flat-bg-block-v1 {
   padding: 40px 0;
-  background: url(../img/patterns/16.png) repeat;
+  background: url(../images/patterns/16.png) repeat;
 }
 
 .flat-bg-block-v1 .checked-list.first-child {
@@ -2672,7 +2672,7 @@
 .quote-v1 {
   padding: 60px 0;
   text-align: center;
-  background: url(../img/patterns/5.png) repeat;
+  background: url(../images/patterns/5.png) repeat;
 }
 
 .quote-v1 p {
@@ -2830,19 +2830,19 @@
 }
 
 .interactive-slider-v1.img-v1 {
-  background: url(../img/bg/18.jpg) no-repeat;
+  background: url(../images/bg/18.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v1.img-v2 {
-  background: url(../img/bg/19.jpg) no-repeat;
+  background: url(../images/bg/19.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v1.img-v3 {
-  background: url(../img/bg/18.jpg) no-repeat;
+  background: url(../images/bg/18.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -2889,19 +2889,19 @@
   padding: 200px 0;
   position: relative;
   text-align: center;
-  background: url(../img/bg/18.jpg) no-repeat;
+  background: url(../images/bg/18.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v2.img-v1 {
-  background: url(../img/bg/25.jpg) no-repeat;
+  background: url(../images/bg/25.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .interactive-slider-v2.img-v2 {
-  background: url(../img/bg/14.jpg) no-repeat;
+  background: url(../images/bg/14.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }

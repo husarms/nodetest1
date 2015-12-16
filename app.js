@@ -13,7 +13,7 @@ var galleryJapan = require('./routes/gallery/japan');
 var galleryLasVegas = require('./routes/gallery/las-vegas');
 var galleryLosAngeles = require('./routes/gallery/los-angeles');
 var gallerySanFrancisco = require('./routes/gallery/san-francisco');
-var contact = require('./routes/contact');
+var aboutMe = require('./routes/about-me');
 
 
 var app = express();
@@ -38,7 +38,7 @@ app.use('/gallery/japan', galleryJapan);
 app.use('/gallery/las-vegas', galleryLasVegas);
 app.use('/gallery/los-angeles', galleryLosAngeles);
 app.use('/gallery/san-francisco', gallerySanFrancisco);
-app.use('/contact',contact);
+app.use('/about-me',aboutMe);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

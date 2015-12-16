@@ -1,7 +1,44 @@
 extends layout
 
 block content
+    //-Breadcrumbs
+    div.breadcrumbs
+        div.container
+            h1.pull-left=title
+            //-ul.pull-right.breadcrumb
+            //-    li
+            //-        a(href='#') Home
+            //-        a(href='#') Portfolio
+            //-        a.active(href='#') Portfolio Text Blocks
     div.container.content
-        div.headline
-            h2= title
-
+        div.row.blog-page
+            //Left sidebar
+            div.col-md-9
+                //-Blog post
+                div.blog.margin-bottom-40
+                    h2
+                        a(href='#') Blog Post Title
+                    div.blog-post-tags
+                        ul.list-unstyled.list-inline.blog-info
+                            li
+                                i.fa.fa-calendar  February 02, 2015
+                    div.blog-img
+                        img.img-responsive(src='/images/img18.jpg', alt='')
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
+                    p
+                        a.btn-u.btn-u-small(href='#')
+                            i.fa.fa-plus-sign Read more
+                //-Blog post
+                div.blog.margin-bottom-40
+                    h2
+                        a(href='#') Blog Post Title
+                    div.blog-post-tags
+                        ul.list-unstyled.list-inline.blog-info
+                            li
+                                i.fa.fa-calendar  January 14, 2015
+                    div.blog-img
+                        img.img-responsive(src='/images/img18.jpg', alt='')
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
+                    p
+                        a.btn-u.btn-u-small(href='#')
+                            i.fa.fa-plus-sign Read more

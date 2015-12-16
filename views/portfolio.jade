@@ -1,0 +1,91 @@
+extends layout
+block content
+    //-Breadcrumbs
+    div.breadcrumbs
+        div.container
+            h1.pull-left=title
+            //-ul.pull-right.breadcrumb
+            //-    li
+            //-        a(href='#') Home
+            //-        a(href='#') Portfolio
+            //-        a.active(href='#') Portfolio Text Blocks
+    //-Content Part
+    div.container.content
+        //-Portfolio Sorting Blocks
+        div.sorting-block
+            div.content-xs
+                ul.sorting-nav.sorting-nav-v1.text-center
+                    li.filter(data-filter='all') All
+                    li.filter(data-filter='category_1') UI Design
+                    li.filter(data-filter='category_2') Wordpress
+                    li.filter(data-filter='category_3') HTML5/CSS3
+                    li.filter(data-filter='category_4') Bootstrap 3
+            ul.row.sorting-grid
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_1.category_3(data-cat='1')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_3.category_1(data-cat='3')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_2.category_1(data-cat='2')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_3.category_4(data-cat='3')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_2.category_1.category_4(data-cat='2')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_4(data-cat='1')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_2.category_3.category_4(data-cat='2')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_1.category_2.category_3(data-cat='1')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_4.category_2(data-cat='1')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_3.category_2(data-cat='3')
+                    a(href='#')
+                        img.img-responsive(src='/images/img11.jpg', alt ='')
+                        span.sorting-cover
+                            span Happy New Year
+                            p Anim pariatur cliche reprehenderit
+            div.clearfix
+
+    //script(type='text/javascript',src='/javascripts/pages/page_portfolio.js')
+    //script(type='text/javascript').
+    //    jQuery(document).ready(function () {
+    //        PortfolioPage.init();
+    //    });
+

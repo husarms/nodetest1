@@ -6,8 +6,15 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
+var portfolio = require('./routes/portfolio');
 var blog = require('./routes/blog');
+var galleryJapan = require('./routes/gallery/japan');
+var galleryLasVegas = require('./routes/gallery/las-vegas');
+var galleryLosAngeles = require('./routes/gallery/los-angeles');
+var gallerySanFrancisco = require('./routes/gallery/san-francisco');
+var contact = require('./routes/contact');
+
 
 var app = express();
 
@@ -24,8 +31,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+//app.use('/users', users);
+app.use('/portfolio', portfolio);
 app.use('/blog', blog);
+app.use('/gallery/japan', galleryJapan);
+app.use('/gallery/las-vegas', galleryLasVegas);
+app.use('/gallery/los-angeles', galleryLosAngeles);
+app.use('/gallery/san-francisco', gallerySanFrancisco);
+app.use('/contact',contact);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

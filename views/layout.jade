@@ -20,8 +20,9 @@ html
     link(rel='stylesheet', href='/plugins/owl-carousel/owl-carousel/owl.carousel.css')
     //-link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/css/sky-forms.css')
     //-link(rel='stylesheet', href='/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css')
-    link(rel='stylesheet', href='/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css')
     //-<!--[if lt IE 9]><link rel="stylesheet" href="/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+    link(rel='stylesheet', href='/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css')
+    link(rel='stylesheet', href='/plugins/fancybox/source/jquery.fancybox.css')
     //-CSS Page Style
     link(rel='stylesheet', href='/stylesheets/pages/page_search.css')
     link(rel='stylesheet', href='/stylesheets/pages/portfolio-v2.css')
@@ -98,17 +99,20 @@ html
     script(type='text/javascript',src='/plugins/jquery-appear.js')
     script(type='text/javascript',src='/plugins/owl-carousel/owl-carousel/owl.carousel.js')
     script(type='text/javascript',src='/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js')
+    script(type='text/javascript',src='/plugins/fancybox/source/jquery.fancybox.pack.js')
     //-JS Page Level
     script(type='text/javascript',src='/plugins/app.js')
     script(type='text/javascript',src='/plugins/owl-carousel.js')
     script(type='text/javascript',src='/javascripts/pages/page_portfolio.js')
     script(type='text/javascript',src='/plugins/progress-bar.js')
     script(type='text/javascript',src='/javascripts/plugins/cube-portfolio/cube-portfolio-lightbox.js')
+    script(type='text/javascript',src='/javascripts/plugins/fancy-box.js')
     script(type='text/javascript').
       jQuery(document).ready(function(){
         App.init();
         PortfolioPage.init();
         ProgressBar.initProgressBarHorizontal();
+        FancyBox.initFancybox();
       });
     <!--[if lt IE 9]>
     <script src="/plugins/respond.js"></script>

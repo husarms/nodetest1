@@ -2,123 +2,147 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aeab25e-d959-41d5-b937-83dcb43ec191" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_21.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_23.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_26.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_27.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_28.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_29.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_31.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_32.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_33.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_34.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_35.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_36.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_37.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_38.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_39.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_40.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_41.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_42.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_43.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_44.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_45.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_46.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_47.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_48.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_49.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/japan/japan_9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/las-vegas/las_vegas_9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/los-angeles/los_angeles_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/los-angeles/los_angeles_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/los-angeles/los_angeles_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/los-angeles/los_angeles_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/los-angeles/los_angeles_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/los-angeles/los_angeles_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/san-francisco/san_francisco_9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/1_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/1_s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/2_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/2_s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/3_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/3_s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/4_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/4_s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/5_b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/5_s.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/blank.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/fancybox_loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/fancybox_loading@2x.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/fancybox_overlay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/fancybox_sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/fancybox_sprite@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/helpers/fancybox_buttons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/fancy-box.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/ajax.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/iframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/demo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/lib/jquery-1.10.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/lib/jquery-1.9.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/helpers/jquery.fancybox-media.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/jquery.fancybox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/jquery.fancybox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/fancybox/source/jquery.fancybox.pack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/matt.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/matt.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/alcatraz_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/alcatraz_2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/bay_bridge.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/la_hollywood.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/oc_boardwalk.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/oc_boardwalk_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/santa_cruz_boardwalk.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/santa_monica_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/sf_pier_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/sunset_66.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/gallery/misc/va_beach_s2000.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/elastislide/9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/layer/bg1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/sliders/layer/bg2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/images/image_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/images/image_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_009_magic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_042_group.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_079_podium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_082_roundabout.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_155_show_thumbnails.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_163_iphone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_214_resize_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/img/glyphicons/glyphicons_266_book_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/css/img/info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/css/img/pre_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/css/img/warning.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrow_large_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrow_large_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrow_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrow_left2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrow_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrow_right2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrowleft.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrowright.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/arrows.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/black50.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/boxed_bgtile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/bullet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/bullet_boxed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/bullets.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/bullets.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/bullets2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/coloredbg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/grain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/gridtile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/gridtile_3x3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/gridtile_3x3_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/gridtile_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/large_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/large_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/loader2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/navigdots.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/navigdots_bgtile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/shadow1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/shadow2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/shadow3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/small_arrows.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/small_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/small_left_boxed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/small_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/small_right_boxed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/timer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/timerdot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/transparent.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/assets/white50.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/font/revicons.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/font/revicons.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/font/revicons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/images/decor_inside.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/images/decor_inside_white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/images/decor_testimonial.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/images/gradient/g30.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/images/gradient/g40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/revolution-slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/css/bootstrap-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/css/documenter_style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/bootstrap-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/google-code-prettify/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/google-code-prettify/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/jquery.easing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/jquery.scrollTo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/js/scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/assets/json.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/css/documenter_style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/css/shDocumenter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/documentation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/jquery.1.6.4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/jquery.easing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/jquery.scrollTo-1.4.2-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/shBrushCss.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/shBrushJScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/shBrushXml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/documentation/js/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/css/settings.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/font/revicons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.enablelog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/gallery/page.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gallery/japan.jade" afterPath="$PROJECT_DIR$/views/gallery/japan.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gallery/las-vegas.jade" afterPath="$PROJECT_DIR$/views/gallery/las-vegas.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gallery/los-angeles.jade" afterPath="$PROJECT_DIR$/views/gallery/los-angeles.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/gallery/san-francisco.jade" afterPath="$PROJECT_DIR$/views/gallery/san-francisco.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
     </list>
     <ignored path="nodetest1.iws" />
@@ -139,114 +163,70 @@
     <favorites_list name="nodetest1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="about-me.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/about-me.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about-me.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/about-me.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="89" selection-start-line="101" selection-start-column="89" selection-end-line="101" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cubeportfolio.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2529" column="25" selection-start-line="2529" selection-start-column="22" selection-end-line="2529" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blocks.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/blocks.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="3212" column="19" selection-start-line="3212" selection-start-column="19" selection-end-line="3212" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="san-francisco.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/gallery/san-francisco.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="las-vegas.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/gallery/las-vegas.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.905661">
-              <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="japan.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/gallery/japan.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9536322">
-              <caret line="67" column="91" selection-start-line="67" selection-start-column="91" selection-end-line="67" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="los-angeles.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/gallery/los-angeles.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.792453">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1564" column="26" selection-start-line="1564" selection-start-column="23" selection-end-line="1564" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.54041207">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="page.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/views/gallery/page.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.5676229">
+                  <caret line="823" column="43" selection-start-line="823" selection-start-column="43" selection-end-line="823" selection-end-column="43" />
+                  <folding>
+                    <element signature="n#style#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/views/index.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.29296875">
+                  <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/layout.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="25" column="104" selection-start-line="25" selection-start-column="104" selection-end-line="25" selection-end-column="104" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="san-francisco.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/gallery/san-francisco.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jade File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -256,7 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/routes/blog.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/portfolio.js" />
@@ -274,11 +253,13 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/about-me.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/blocks.css" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/views/gallery/las-vegas.jade" />
         <option value="$PROJECT_DIR$/views/gallery/san-francisco.jade" />
         <option value="$PROJECT_DIR$/views/gallery/los-angeles.jade" />
         <option value="$PROJECT_DIR$/views/gallery/japan.jade" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/views/gallery/page.html" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
       </list>
     </option>
   </component>
@@ -398,10 +379,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -420,6 +397,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="revolution-slider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodetest1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodetest1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -460,6 +459,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sliders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodetest1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodetest1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gallery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -486,7 +507,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="japan" />
+              <option name="myItemId" value="misc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -504,14 +525,15 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/javascripts/plugins" />
+      <recent name="$PROJECT_DIR$/public/images/gallery/misc" />
       <recent name="$PROJECT_DIR$/public/plugins" />
+      <recent name="$PROJECT_DIR$/public/javascripts/plugins" />
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/images/gallery" />
-      <recent name="C:\node\nodetest1\public\images" />
-      <recent name="C:\node\nodetest1\public\images\patterns" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\node\nodetest1\public\plugins" />
@@ -593,13 +615,13 @@
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18402778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33668903" sideWeight="0.50241256" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25824177" sideWeight="0.49758744" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25824177" sideWeight="0.49758744" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -628,32 +650,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="392" column="62" selection-start-line="392" selection-start-column="60" selection-end-line="392" selection-end-column="62" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1564" column="26" selection-start-line="1564" selection-start-column="23" selection-end-line="1564" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -842,14 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/pages/page_portfolio.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2944882">
@@ -929,7 +917,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="392" column="62" selection-start-line="392" selection-start-column="60" selection-end-line="392" selection-end-column="62" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -946,14 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1564" column="26" selection-start-line="1564" selection-start-column="23" selection-end-line="1564" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -990,26 +970,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="89" selection-start-line="101" selection-start-column="89" selection-end-line="101" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/gallery/las-vegas.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.905661">
           <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/gallery/san-francisco.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1024,8 +988,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/gallery/japan.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9536322">
+        <state vertical-scroll-proportion="-11.641509">
           <caret line="67" column="91" selection-start-line="67" selection-start-column="91" selection-end-line="67" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022189349">
+          <caret line="1564" column="26" selection-start-line="1564" selection-start-column="23" selection-end-line="1564" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.enablelog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plugins/revolution-slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="104" selection-start-line="25" selection-start-column="104" selection-end-line="25" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/gallery/san-francisco.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/gallery/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5676229">
+          <caret line="823" column="43" selection-start-line="823" selection-start-column="43" selection-end-line="823" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29296875">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
           <folding />
         </state>
       </provider>

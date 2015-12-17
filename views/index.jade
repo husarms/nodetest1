@@ -1,62 +1,45 @@
 extends layout
 
 block content
-  div.container.content
-    div.headline
-      h2= title
-    //-Info blocks
-    div.row.category.margin-bottom-20
-      div.col-md-4.col-sm-6
-        div.content-boxes-v3.margin-bottom-10.md-margin-bottom-20
-          i.icon-custom.icon-sm.rounded-x.icon-bg-sea.icon-line.icon-badge
-          div.content-boxes-in-v3
-            h3
-              a(href='#') Top 100 templates
-            p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-        div.content-boxes-v3.margin-bottom-10.md-margin-bottom-20
-          i.icon-custom.icon-sm.rounded-x.icon-bg-red.fa.fa-hdd-o
-          div.content-boxes-in-v3
-            h3
-              a(href='#') Wikipedia
-            p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-      //-Info blocks
-      div.col-md-4.col-sm-6.md-margin-bottom-40
-        div.content-boxes-v3.margin-bottom-10.md-margin-bottom-20
-          i.icon-custom.icon-sm.rounded-x.icon-bg-blue.fa.fa-bell-o
-          div.content-boxes-in-v3
-            h3
-              a(href='#') Hi-Tech
-              small  (324)
-            p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-        div.content-boxes-v3.margin-bottom-10.md-margin-bottom-20
-          i.icon-custom.icon-sm.rounded-x.icon-bg-yellow.fa.fa-thumbs-o-up
-          div.content-boxes-in-v3
-            h3
-              a(href='#') Programming
-              small  (4053)
-            p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-      //-Section block
-      div.col-md-4.col-sm-12
-        div.section-block
-          div.text-center
-            i.rounded.icon-custom.icon-sm.icon-bg-darker.line-icon.icon-graph
-            h2 Popular search
-            p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
-              a(href='#') View more
-          br
-          //-Progress Bar
-          h3.heading-xs.no-top-space Web Design
-            span.pull-right 88%
-          div.progress.progress-u.progress-xxs
-            div.progress-bar.progress-bar-u(style='width: 88%', aria-valuemax='100', aria-valuemin='0', role='progressbar')
-          div.clearfix
-          div.section-block-info
-            ul.list-line.tags-v1
-              li
-                a(href='#') #HTML5
-              li
-                a(href='#') #Bootstrap
-
-  //div.jumbotron
-  //  h1= title
-  //  p Welcome to #{title}
+    //-Slider
+    div.tp-banner-container
+        div.tp-banner
+            ul
+                //-Slide
+                li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Title1')
+                    //-Main Image
+                    img(src='/images/gallery/misc/santa_monica_2.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='left top',data-bgrepeat='no-repeat')
+                    div.tp-caption.revolution-ch1.sft.start(data-x='center',
+                        data-hoffset='0',
+                        data-y='100',
+                        data-speed='1500',
+                        data-start='500',
+                        data-easing='Back.easeInOut',
+                        data-endeasing='Power1.easIn',
+                        data-endspeed='300').
+                            First Name Last Name
+                    //-Layer
+                    div.tp-caption.revolution-ch2.sft(data-x='center',
+                    data-hoffset='0',
+                    data-y='190',
+                    data-speed='1400',
+                    data-start='2000',
+                    data-easing='Power4.easeInOut',
+                    data-endeasing='Power1.easIn',
+                    data-endspeed='300',
+                    data-captionhidden='off',
+                    style='z-index: 6').
+                        Software Developer <br/>
+                    //-Layer
+                    div.tp-caption.sft(data-x='center',
+                    data-hoffset='0',
+                    data-y='310',
+                    data-speed='1600',
+                    data-start='2800',
+                    data-easing='Power4.easeInOut',
+                    data-endeasing='Power1.easIn',
+                    data-endspeed='300',
+                    data-captionhidden='off',
+                    style='z-index: 6')
+                        a.btn-u.btn-brd.btn-brd-hover.btn-u-light(href='/about-me') Learn More
+                        a.btn-u.btn-brd.btn-brd-hover.btn-u-light(href='/portfolio') My Work

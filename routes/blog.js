@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('blog', { title: 'Blog' });
-    //res.renderPjax('blog', { locals: { title: 'Blog'} });
+    //res.render('blog', { title: 'Blog' });
+    res.renderPjax('blog', { title: 'Blog' });
 });
 
 module.exports = router;

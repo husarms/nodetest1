@@ -2,145 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aeab25e-d959-41d5-b937-83dcb43ec191" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/21.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/29.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/img3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bg/img4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/breadcrumbs/img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/breadcrumbs/img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/breadcrumbs/img3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/breadcrumbs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/patterns/gridtile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/faces.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img-v1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img-v2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img-v3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img1-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img1-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img10-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img11-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img12-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img13-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img14-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img15-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img16-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img17-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img18-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img19-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img2-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img2-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img20-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img21-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img22-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img23-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img24-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img25-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img26-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img27-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img28-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img29-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img3-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img3-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img30-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img31-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img32-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img33-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img34-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img35-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img36-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img37-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img38-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img39-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img4-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img4-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img40-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img5-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img5-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img6-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img6-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img7-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img7-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img8-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img8-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img9-md.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/team/img9-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/img/cbp-loading-popup.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/img/cbp-loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/img/cbp-sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-10.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-2-ns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-3-ns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-4-fw-ns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-4-fw-tx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-4-fw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-4-ns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-5-fw-ns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-5-fw-tx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-5-fw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-6-fw-ns.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-6-fw-tx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-6-fw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-cols.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/plugins/cube-portfolio/cube-portfolio-lightbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/documentation/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/documentation/css/prettify.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/documentation/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/documentation/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/documentation/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/cube-portfolio/documentation/js/prettify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/jquery-appear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/plugins/progress-bar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/about-me.jade" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/contact.jade" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/contact.js" afterPath="$PROJECT_DIR$/routes/about-me.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/blocks.css" afterPath="$PROJECT_DIR$/public/stylesheets/blocks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="nodetest1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -214,8 +76,8 @@
       <file leaf-file-name="blocks.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/blocks.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33275864">
-              <caret line="3212" column="19" selection-start-line="3212" selection-start-column="19" selection-end-line="3212" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.5086207">
+              <caret line="3218" column="27" selection-start-line="3218" selection-start-column="27" selection-end-line="3218" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -414,118 +276,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodetest1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1034,8 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/blocks.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33275864">
-          <caret line="3212" column="19" selection-start-line="3212" selection-start-column="19" selection-end-line="3212" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.5086207">
+          <caret line="3218" column="27" selection-start-line="3218" selection-start-column="27" selection-end-line="3218" selection-end-column="27" />
           <folding />
         </state>
       </provider>

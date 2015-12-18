@@ -7,13 +7,13 @@
 */
 
 /*Import Global Compulsory CSS Files*/
-@import url(ie8.css);
-@import url(blocks.css);
-@import url(plugins.css);
-@import url(app.css);
+@import url(ie8.min.css);
+@import url(blocks.min.css);
+@import url(plugins.min.css);
+@import url(app.min.css);
 
 /*Import CSS Plugins*/
-@import url(plugins/style-switcher.css);
+@import url(plugins/style-switcher.min.css);
 
 body { 
    color: #333; 

@@ -50,4 +50,16 @@ block content
                 div.progress.progress-u.progress-xxs
                     div.progress-bar.progress-bar-aqua(role='progressbar', data-width='97')
 
+    //-JS Implementing Plugins
+    script(type='text/javascript',src='/plugins/jquery-appear.js')
+    script(type='text/javascript',src='/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js')
+
+    //-JS Page Level
+    script(type='text/javascript',src='/plugins/progress-bar.js')
+    script(type='text/javascript',src='/javascripts/plugins/cube-portfolio/cube-portfolio-lightbox.js')
+    script(type='text/javascript').
+        jQuery(document).ready(function () {
+            ProgressBar.initProgressBarHorizontal();
+        });
+
 

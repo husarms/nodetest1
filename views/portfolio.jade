@@ -4,11 +4,6 @@ block content
     div.breadcrumbs
         div.container
             h1.pull-left=title
-            //-ul.pull-right.breadcrumb
-            //-    li
-            //-        a(href='#') Home
-            //-        a(href='#') Portfolio
-            //-        a.active(href='#') Portfolio Text Blocks
     //-Content Part
     div.container.content
         //-Portfolio Sorting Blocks
@@ -83,9 +78,13 @@ block content
                             p Anim pariatur cliche reprehenderit
             div.clearfix
 
-    //script(type='text/javascript',src='/javascripts/pages/page_portfolio.js')
-    //script(type='text/javascript').
-    //    jQuery(document).ready(function () {
-    //        PortfolioPage.init();
-    //    });
+    //-JS Implementing Plugins
+    script(type='text/javascript',src='/plugins/jquery.mixitup.min.js')
+    //-JS Page Level
+    script(type='text/javascript',src='/javascripts/pages/page_portfolio.js')
+    script(type='text/javascript',src='/javascripts/plugins/cube-portfolio/cube-portfolio-lightbox.js')
+    script(type='text/javascript').
+        jQuery(document).ready(function () {
+            PortfolioPage.init();
+        });
 

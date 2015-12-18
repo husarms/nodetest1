@@ -68,3 +68,13 @@ block content
                         img.img-responsive(src='/images/gallery/las-vegas/las_vegas_13.jpg', alt='')
 
 
+    //-JS Implementing Plugins
+    script(type='text/javascript',src='/plugins/fancybox/source/jquery.fancybox.pack.js')
+    //-JS Page Level
+    script(type='text/javascript',src='/javascripts/plugins/fancy-box.js')
+    script(type='text/javascript').
+        jQuery(document).ready(function () {
+            FancyBox.initFancybox();
+        });
+
+

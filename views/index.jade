@@ -68,3 +68,14 @@ block content
                     div.col-md-6
                         img.img-repsonsive.margin-bottom-10(src='/images/gallery/japan/japan_1.jpg',alt='',height='100%',width='100%')
 
+
+    //-JS Implementing Plugins
+    script(type='text/javascript',src='/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')
+    script(type='text/javascript',src='/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')
+    //-JS Page Level
+    script(type='text/javascript',src='/javascripts/plugins/revolution-slider.js')
+    script(type='text/javascript').
+        jQuery(document).ready(function () {
+            RevolutionSlider.initRSfullWidth();
+        });
+

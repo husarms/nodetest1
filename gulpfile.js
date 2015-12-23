@@ -131,21 +131,21 @@ gulp.task('minify-cubeportfolio', function() {
         .pipe(gulp.dest('public/plugins/cube-portfolio/cubeportfolio/css'));
 });
 
-gulp.task('minify-fancybox', function() {
-    return gulp.src('public/plugins/fancybox/source/jquery.fancybox.css')
-        .pipe(uncss({
-            html: [
-                'http://localhost:3000/',
-                'http://localhost:3000/gallery/japan',
-                'http://localhost:3000/about-me',
-                'http://localhost:3000/blog',
-                'http://localhost:3000/portfolio'
-            ]
-        }))
-        .pipe(minifyCSS())
-        .pipe(rename('jquery.fancybox.min.css'))
-        .pipe(gulp.dest('public/plugins/fancybox/source'));
-});
+//gulp.task('minify-fancybox', function() {
+//    return gulp.src('public/plugins/fancybox/source/jquery.fancybox.css')
+//        .pipe(uncss({
+//            html: [
+//                'http://localhost:3000/',
+//                'http://localhost:3000/gallery/japan',
+//                'http://localhost:3000/about-me',
+//                'http://localhost:3000/blog',
+//                'http://localhost:3000/portfolio'
+//            ]
+//        }))
+//        .pipe(minifyCSS())
+//        .pipe(rename('jquery.fancybox.min.css'))
+//        .pipe(gulp.dest('public/plugins/fancybox/source'));
+//});
 
 gulp.task('minify-settings', function() {
     return gulp.src('public/plugins/revolution-slider/rs-plugin/css/settings.css')
@@ -286,7 +286,7 @@ gulp.task('minify-all',
         'minify-line-icons',
         'minify-font-awesome',
         'minify-cubeportfolio',
-        'minify-fancybox',
+        //'minify-fancybox',
         'minify-settings',
         'minify-settings-ie8',
         'minify-page_search',

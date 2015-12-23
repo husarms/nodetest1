@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var pjax = require('express-pjax');
-var compression = require('compression');
 
 //Routes
 var routes = require('./routes/index');
@@ -17,7 +16,6 @@ var galleryLasVegas = require('./routes/gallery/las-vegas');
 var galleryLosAngeles = require('./routes/gallery/los-angeles');
 var gallerySanFrancisco = require('./routes/gallery/san-francisco');
 var aboutMe = require('./routes/about-me');
-
 
 var app = express();
 
@@ -33,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(pjax());
-app.use(compression());
+//app.use(express.compress());
 
 app.use('/', routes);
 //app.use('/users', users);

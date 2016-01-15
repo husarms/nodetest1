@@ -36,7 +36,7 @@ app.use(pjax());
 
 //app.use('/', routes);
 //make blog the root
-app.use('/',blog);
+app.use('/',index);
 //app.use('/users', users);
 app.use('/portfolio', portfolio);
 app.use('/blog', blog);

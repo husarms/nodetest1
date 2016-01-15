@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var pjax = require('express-pjax');
 
 //Routes
-var routes = require('./routes/index');
+var index = require('./routes/index');
 //var users = require('./routes/users');
 var portfolio = require('./routes/portfolio');
 var blog = require('./routes/blog');
@@ -16,6 +16,7 @@ var galleryLasVegas = require('./routes/gallery/las-vegas');
 var galleryLosAngeles = require('./routes/gallery/los-angeles');
 var gallerySanFrancisco = require('./routes/gallery/san-francisco');
 var aboutMe = require('./routes/about-me');
+var blogPost01152016 = require('./routes/blog-posts/01-15-2016');
 
 var app = express();
 
@@ -33,7 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(pjax());
 //app.use(express.compress());
 
-app.use('/', routes);
+//app.use('/', routes);
+//make blog the root
+app.use('/',blog);
 //app.use('/users', users);
 app.use('/portfolio', portfolio);
 app.use('/blog', blog);
@@ -42,6 +45,8 @@ app.use('/gallery/las-vegas', galleryLasVegas);
 app.use('/gallery/los-angeles', galleryLosAngeles);
 app.use('/gallery/san-francisco', gallerySanFrancisco);
 app.use('/about-me',aboutMe);
+app.use('/index',index);
+app.use('/blog/posts/01-15-2016',blogPost01152016);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

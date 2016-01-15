@@ -3,6 +3,30 @@ var uncss = require('gulp-uncss');
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
+
+
+gulp.task('uncss-style', function(){
+    var files = [''],
+        options = {
+            ignore : [''],
+            media : [''],
+            csspath : '/',
+            raw : '',
+            stylesheets : ['public/stylesheets/style.css'],
+            ignoreSheets : [''],
+            urls : [
+                'http://localhost:3000/',
+                'http://localhost:3000/gallery/japan',
+                'http://localhost:3000/about-me',
+                'http://localhost:3000/blog',
+                'http://localhost:3000/portfolio'],
+            timeout : 1000,
+            htmlroot : ['']
+        };
+
+
+});
+
 gulp.task('minify-style', function() {
     return gulp.src('public/stylesheets/style.css')
         .pipe(uncss({

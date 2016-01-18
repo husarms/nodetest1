@@ -257,7 +257,7 @@ gulp.task('minify-font-awesome', function() {
             ]
         }))
         .pipe(minifyCSS())
-        .pipe(rename('font-aweesome.min.css'))
+        .pipe(rename('font-awesome.min.css'))
         .pipe(gulp.dest('public/plugins/font-awesome/css'));
 });
 

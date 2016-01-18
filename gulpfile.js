@@ -4,28 +4,94 @@ var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
 
-
-gulp.task('uncss-style', function(){
-    var files = [''],
-        options = {
-            ignore : [''],
-            media : [''],
-            csspath : '/',
-            raw : '',
-            stylesheets : ['public/stylesheets/style.css'],
-            ignoreSheets : [''],
-            urls : [
-                'http://localhost:3000/',
-                'http://localhost:3000/gallery/japan',
-                'http://localhost:3000/about-me',
-                'http://localhost:3000/blog',
-                'http://localhost:3000/portfolio'],
-            timeout : 1000,
-            htmlroot : ['']
-        };
-
-
-});
+///* Smartphones (portrait and landscape) ----------- */
+//@media only screen
+//and (min-device-width : 320px)
+//and (max-device-width : 480px) {
+//    /* Styles */
+//}
+//
+///* Smartphones (landscape) ----------- */
+//@media only screen
+//and (min-width : 321px) {
+//    /* Styles */
+//}
+//
+///* Smartphones (portrait) ----------- */
+//@media only screen
+//and (max-width : 320px) {
+//    /* Styles */
+//}
+//
+///* iPads (portrait and landscape) ----------- */
+//@media only screen
+//and (min-device-width : 768px)
+//and (max-device-width : 1024px) {
+//    /* Styles */
+//}
+//
+///* iPads (landscape) ----------- */
+//@media only screen
+//and (min-device-width : 768px)
+//and (max-device-width : 1024px)
+//and (orientation : landscape) {
+//    /* Styles */
+//}
+//
+///* iPads (portrait) ----------- */
+//@media only screen
+//and (min-device-width : 768px)
+//and (max-device-width : 1024px)
+//and (orientation : portrait) {
+//    /* Styles */
+//}
+//
+///* Desktops and laptops ----------- */
+//@media only screen
+//and (min-width : 1224px) {
+//    /* Styles */
+//}
+//
+///* Large screens ----------- */
+//@media only screen
+//and (min-width : 1824px) {
+//    /* Styles */
+//}
+//
+///* iPhone 4 ----------- */
+//@media
+//only screen and (-webkit-min-device-pixel-ratio : 1.5),
+//only screen and (min-device-pixel-ratio : 1.5) {
+//    /* Styles */
+//}
+//
+//gulp.task('uncss-style', function(){
+//    var files = [
+//            'http://localhost:3000/',
+//            'http://localhost:3000/gallery/japan',
+//            'http://localhost:3000/about-me',
+//            'http://localhost:3000/blog',
+//            'http://localhost:3000/portfolio'
+//    ],
+//        options = {
+//            media : [
+//                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+//                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+//                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+//                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+//                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+//                '(min-width:1281px)',// hi-res laptops and desktops */ }
+//            ],
+//            csspath : '../public/',
+//            stylesheets : [
+//                'plugins/bootstrap/css/bootstrap.css'
+//            ],
+//            timeout : 1000
+//        };
+//    return uncss(files, options, function (error, output) {
+//        console.log(output);
+//    })
+//});
 
 gulp.task('minify-style', function() {
     return gulp.src('public/stylesheets/style.css')
@@ -36,6 +102,14 @@ gulp.task('minify-style', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -43,37 +117,53 @@ gulp.task('minify-style', function() {
         .pipe(gulp.dest('public/stylesheets', {overwrite: true}));
 });
 
-gulp.task('minify-bootstrap', function() {
-    return gulp.src('public/plugins/bootstrap/css/bootstrap.css')
-        .pipe(uncss({
-            html: [
-                'http://localhost:3000/',
-                'http://localhost:3000/gallery/japan',
-                'http://localhost:3000/about-me',
-                'http://localhost:3000/blog',
-                'http://localhost:3000/portfolio'
-            ]
-        }))
-        .pipe(minifyCSS())
-        .pipe(rename('bootstrap.min.css'))
-        .pipe(gulp.dest('public/plugins/bootstrap/css'));
-});
+//gulp.task('minify-bootstrap', function() {
+//    return gulp.src('public/plugins/bootstrap/css/bootstrap.css')
+//        .pipe(uncss({
+//            html: [
+//                'http://localhost:3000/',
+//                'http://localhost:3000/gallery/japan',
+//                'http://localhost:3000/about-me',
+//                'http://localhost:3000/blog',
+//                'http://localhost:3000/portfolio'
+//            ],
+//            media : [
+//                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+//                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+//                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+//                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+//                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+//                '(min-width:1281px)',// hi-res laptops and desktops */ }
+//            ]
+//        }))
+//        .pipe(minifyCSS())
+//        .pipe(rename('bootstrap.min.css'))
+//        .pipe(gulp.dest('public/plugins/bootstrap/css'));
+//});
 
-gulp.task('minify-header-default', function() {
-    return gulp.src('public/stylesheets/header-default.css')
-        .pipe(uncss({
-            html: [
-                'http://localhost:3000/',
-                'http://localhost:3000/gallery/japan',
-                'http://localhost:3000/about-me',
-                'http://localhost:3000/blog',
-                'http://localhost:3000/portfolio'
-            ]
-        }))
-        .pipe(minifyCSS())
-        .pipe(rename('header-default.min.css'))
-        .pipe(gulp.dest('public/stylesheets'));
-});
+//gulp.task('minify-header-default', function() {
+//    return gulp.src('public/stylesheets/header-default.css')
+//        .pipe(uncss({
+//            html: [
+//                'http://localhost:3000/',
+//                'http://localhost:3000/gallery/japan',
+//                'http://localhost:3000/about-me',
+//                'http://localhost:3000/blog',
+//                'http://localhost:3000/portfolio'
+//            ],
+//            media : [
+//                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+//                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+//                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+//                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+//                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+//                '(min-width:1281px)',// hi-res laptops and desktops */ }
+//            ]
+//        }))
+//        .pipe(minifyCSS())
+//        .pipe(rename('header-default.min.css'))
+//        .pipe(gulp.dest('public/stylesheets'));
+//});
 
 gulp.task('minify-footer-v1', function() {
     return gulp.src('public/stylesheets/footer-v1.css')
@@ -84,6 +174,14 @@ gulp.task('minify-footer-v1', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -100,6 +198,14 @@ gulp.task('minify-animate', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -116,6 +222,14 @@ gulp.task('minify-line-icons', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -132,6 +246,14 @@ gulp.task('minify-font-awesome', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -148,6 +270,14 @@ gulp.task('minify-cubeportfolio', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -180,6 +310,14 @@ gulp.task('minify-settings', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -196,6 +334,14 @@ gulp.task('minify-settings-ie8', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -212,6 +358,14 @@ gulp.task('minify-page_search', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -228,6 +382,14 @@ gulp.task('minify-portfolio-v2', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -244,6 +406,14 @@ gulp.task('minify-blog', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -260,6 +430,14 @@ gulp.task('minify-page_one', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -276,6 +454,14 @@ gulp.task('minify-teal', function() {
                 'http://localhost:3000/about-me',
                 'http://localhost:3000/blog',
                 'http://localhost:3000/portfolio'
+            ],
+            media : [
+                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+                '(min-width:1281px)',// hi-res laptops and desktops */ }
             ]
         }))
         .pipe(minifyCSS())
@@ -283,43 +469,51 @@ gulp.task('minify-teal', function() {
         .pipe(gulp.dest('public/stylesheets/theme-colors'));
 });
 
-gulp.task('minify-dark', function() {
-    return gulp.src('public/stylesheets/theme-skins/dark.css')
-        .pipe(uncss({
-            html: [
-                'http://localhost:3000/',
-                'http://localhost:3000/gallery/japan',
-                'http://localhost:3000/about-me',
-                'http://localhost:3000/blog',
-                'http://localhost:3000/portfolio'
-            ]
-        }))
-        .pipe(minifyCSS())
-        .pipe(rename('dark.min.css'))
-        .pipe(gulp.dest('public/stylesheets/theme-skins'));
-});
+//gulp.task('minify-dark', function() {
+//    return gulp.src('public/stylesheets/theme-skins/dark.css')
+//        .pipe(uncss({
+//            html: [
+//                'http://localhost:3000/',
+//                'http://localhost:3000/gallery/japan',
+//                'http://localhost:3000/about-me',
+//                'http://localhost:3000/blog',
+//                'http://localhost:3000/portfolio'
+//            ],
+//            media : [
+//                '(min-width:320px)',// smartphones, iPhone, portrait 480x320 phones */ }
+//                '(min-width:481px)',// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+//                '(min-width:641px)',// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+//                '(min-width:961px)',// tablet, landscape iPad, lo-res laptops ands desktops */ }
+//                '(min-width:1025px)',// big landscape tablets, laptops, and desktops */ }
+//                '(min-width:1281px)',// hi-res laptops and desktops */ }
+//            ]
+//        }))
+//        .pipe(minifyCSS())
+//        .pipe(rename('dark.min.css'))
+//        .pipe(gulp.dest('public/stylesheets/theme-skins'));
+//});
 
 //-Run all minify tasks
-gulp.task('minify-all',
-    [
-        'minify-style',
-        'minify-bootstrap',
-        'minify-header-default',
-        'minify-footer-v1',
-        'minify-animate',
-        'minify-line-icons',
-        'minify-font-awesome',
-        'minify-cubeportfolio',
-        //'minify-fancybox',
-        'minify-settings',
-        'minify-settings-ie8',
-        'minify-page_search',
-        'minify-portfolio-v2',
-        'minify-blog',
-        'minify-page_one',
-        'minify-teal',
-        'minify-dark'
-]);
+//gulp.task('minify-all',
+//    [
+//        'minify-style',
+//        'minify-bootstrap',
+//        'minify-header-default',
+//        'minify-footer-v1',
+//        'minify-animate',
+//        'minify-line-icons',
+//        'minify-font-awesome',
+//        'minify-cubeportfolio',
+//        //'minify-fancybox',
+//        'minify-settings',
+//        'minify-settings-ie8',
+//        'minify-page_search',
+//        'minify-portfolio-v2',
+//        'minify-blog',
+//        'minify-page_one',
+//        'minify-teal',
+//        'minify-dark'
+//]);
 
 //gulp.task('default', function() {
 //    return gulp.src(['public/stylesheets/style.min.css',

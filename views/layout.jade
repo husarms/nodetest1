@@ -1,85 +1,155 @@
 doctype html
 html
-  head
-    title= title
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='shortcut icon' href='/favicon.ico')
-    //-Web Fonts
-    link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin')
-    //-CSS Global Compulsory
-    link(rel='stylesheet', href='/plugins/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.min.css')
-    //-link(rel='stylesheet', href='/stylesheets/blog.style.css')
-    //-CSS Header and Footer
-    link(rel='stylesheet', href='/stylesheets/header-default.min.css')
-    link(rel='stylesheet', href='/stylesheets/footer-v1.min.css')
-    //-CSS Implementing Plugins
-    link(rel='stylesheet', href='/stylesheets/plugins/animate.min.css')
-    link(rel='stylesheet', href='/plugins/line-icons/line-icons.min.css')
-    link(rel='stylesheet', href='/plugins/font-awesome/css/font-awesome.min.css')
-    link(rel='stylesheet', href='/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css')
-    link(rel='stylesheet', href='/plugins/fancybox/source/jquery.fancybox.min.css')
-    link(rel='stylesheet', href='/plugins/revolution-slider/rs-plugin/css/settings.min.css', media='screen')
-    <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.min.css" type="text/css" media="screen"><![endif]-->
-    //-CSS Page Style
-    link(rel='stylesheet', href='/stylesheets/pages/page_search.min.css')
-    link(rel='stylesheet', href='/stylesheets/pages/portfolio-v2.min.css')
-    link(rel='stylesheet', href='/stylesheets/pages/blog.min.css')
-    link(rel='stylesheet', href='/stylesheets/pages/page_one.min.css')
-    //-CSS Theme
-    link(rel='stylesheet', href='/stylesheets/theme-colors/teal.min.css')
-    link(rel='stylesheet', href='/stylesheets/theme-skins/dark.min.css')
-    //-JS Global Compulsory
-    script(type='text/javascript',src='/plugins/jquery/jquery.min.js')
-    script(type='text/javascript',src='/plugins/jquery/jquery-migrate.min.js')
-    script(type='text/javascript',src='/plugins/bootstrap/js/bootstrap.min.js')
-  body.dark
-    div.wrapper
-      div.header
-        div.container
-          a.logo(href='/')
-            img(src='/images/logo-matthusar.png',alt='logo',width='200px',height='36px')
-          button.navbar-toggle(type='button',data-toggle='collapse',data-target=".navbar-responsive-collapse")
-            span.sr-only.
-              Toggle Navigation
-            span.fa.fa-bars
-        div.collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
-          div.container
-            ul.nav.navbar-nav
-              li
-                a(href='/') Home
-              li
-                a(href='/portfolio') Portfolio
-              li
-                a(href='/blog') Blog
-              li.dropdown
-                a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown') Gallery
-                ul.dropdown-menu
-                  li
-                    a(href='/gallery/las-vegas') Las Vegas
-                    a(href='/gallery/san-francisco') San Francisco
-                    a(href='/gallery/los-angeles') Los Angeles
-                    a(href='/gallery/japan') Japan
-              li
-                a(href='/about-me') About Me
+    head
+        title= title
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='shortcut icon' href='/favicon.ico')
+        //-Web Fonts
+        link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin')
+        //-CSS Global Compulsory
+        link(rel='stylesheet', href='/plugins/bootstrap/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.min.css')
+        //-link(rel='stylesheet', href='/stylesheets/blog.style.css')
+        //-CSS Header and Footer
+        link(rel='stylesheet', href='/stylesheets/header-default.min.css')
+        link(rel='stylesheet', href='/stylesheets/footer-v1.min.css')
+        //-CSS Implementing Plugins
+        link(rel='stylesheet', href='/stylesheets/plugins/animate.min.css')
+        link(rel='stylesheet', href='/plugins/line-icons/line-icons.min.css')
+        link(rel='stylesheet', href='/plugins/font-awesome/css/font-awesome.min.css')
+        link(rel='stylesheet', href='/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css')
+        link(rel='stylesheet', href='/plugins/fancybox/source/jquery.fancybox.min.css')
+        link(rel='stylesheet', href='/plugins/revolution-slider/rs-plugin/css/settings.min.css', media='screen')
+        <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.min.css" type="text/css" media="screen"><![endif]-->
+        //-CSS Page Style
+        link(rel='stylesheet', href='/stylesheets/pages/page_search.min.css')
+        link(rel='stylesheet', href='/stylesheets/pages/portfolio-v2.min.css')
+        link(rel='stylesheet', href='/stylesheets/pages/blog.min.css')
+        link(rel='stylesheet', href='/stylesheets/pages/page_one.min.css')
+        //-CSS Theme
+        link(rel='stylesheet', href='/stylesheets/theme-colors/teal.min.css')
+        link(rel='stylesheet', href='/stylesheets/theme-skins/dark.min.css')
+        //-JS Global Compulsory
+        script(type='text/javascript',src='/plugins/jquery/jquery.min.js')
+        script(type='text/javascript',src='/plugins/jquery/jquery-migrate.min.js')
+        script(type='text/javascript',src='/plugins/bootstrap/js/bootstrap.min.js')
 
-    block navbar
-    block content
+    body.dark
+        div.wrapper
+            div.header
+                div.container
+                    a(href='/')
+                        img(src='/images/matthusar-dark-md.png',alt='logo',width='220px',height='77px')
+                    button.navbar-toggle(type='button',data-toggle='collapse',data-target=".navbar-responsive-collapse")
+                        span.sr-only Toggle Navigation
+                        span.fa.fa-bars
+                div.collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
+                    div.container
+                        ul.nav.navbar-nav
+                            li
+                                a(href='/') Home
+                            li
+                                a(href='/portfolio') Portfolio
+                            li
+                                a(href='/blog') Blog
+                            li.dropdown
+                                a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown') Gallery
+                                ul.dropdown-menu
+                                    li
+                                        a(href='/gallery/las-vegas') Las Vegas
+                                        a(href='/gallery/san-francisco') San Francisco
+                                        a(href='/gallery/los-angeles') Los Angeles
+                                        a(href='/gallery/japan') Japan
+                            li
+                                a(href='/about-me') About Me
 
-    //-JS Implementing Plugins - Global
-    script(type='text/javascript',src='/javascripts/plugins/jquery.pjax.js')
-    script(type='text/javascript',src='/plugins/back-to-top.js')
-    script(type='text/javascript',src='/plugins/smoothScroll.js')
-    //-JS Page Level
-    script(type='text/javascript',src='/plugins/app.js')
-    script(type='text/javascript').
-      jQuery(document).ready(function(){
-        App.init();
-      });
-    <!--[if lt IE 9]>
-    <script src="/plugins/respond.js"></script>
-    <script src="/plugins/html5shiv.js"></script>
-    <script src="/plugins/placeholder-IE-fixes.js"></script>
-    <![endif]-->
-    block script
+        block navbar
+        block content
+
+        //-JS Implementing Plugins - Global
+        script(type='text/javascript',src='/javascripts/plugins/jquery.pjax.js')
+        script(type='text/javascript',src='/plugins/back-to-top.js')
+        script(type='text/javascript',src='/plugins/smoothScroll.js')
+        //-JS Page Level
+        script(type='text/javascript',src='/plugins/app.js')
+        script(type='text/javascript').
+            jQuery(document).ready(function () {
+                App.init();
+            });
+        <!--[if lt IE 9]>
+        <script src="/plugins/respond.js"></script>
+        <script src="/plugins/html5shiv.js"></script>
+        <script src="/plugins/placeholder-IE-fixes.js"></script>
+        <![endif]-->
+        block script
+
+                //-body.header-fixed.dark
+                //-  div.wrapper
+                //-    div.header-v6.header-classic-dark.header-sticky
+                //-      //--Navbar
+                //-      div.navbar.mega-menu(role='navigation')
+                //-        div.container
+                //-          div.menu-container
+                //-            button.navbar-toggle(type='button',data-toggle='collapse',data-target=".navbar-responsive-collapse")
+                //-              span.sr-only Toggle Navigation
+                //-              span.icon-bar
+                //-              span.icon-bar
+                //-              span.icon-bar
+                //-            div.navbar-brand
+                //-              a(href='/')
+                //-                img.default-logo(src='/images/matthusar-dark2.png', alt='Logo')
+                //-                img.shrink-logo(src='/images/matthusar-light2.png',alt='Logo')
+                //-          div.collapse.navbar-collapse.navbar-responsive-collapse
+                //-            div.menu-container
+                //-              ul.nav.navbar-nav
+                //-                li
+                //-                  a(href='/') Home
+                //-                li
+                //-                  a(href='/portfolio') Portfolio
+                //-                li
+                //-                  a(href='/blog') Blog
+                //-                li.dropdown
+                //-                  a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown') Gallery
+                //-                  ul.dropdown-menu
+                //-                    li
+                //-                      a(href='/gallery/las-vegas') Las Vegas
+                //-                      a(href='/gallery/san-francisco') San Francisco
+                //-                      a(href='/gallery/los-angeles') Los Angeles
+                //-                      a(href='/gallery/japan') Japan
+                //-                li
+                //-                  a(href='/about-me') About Me
+
+
+
+//-body.header-fixed.header-fixed-space.dark
+//-    div.wrapper
+//-        div.header-v3.header-sticky
+//-            //--Navbar
+//-            div.navbar.navbar-default.mega-menu(role='navigation')
+//-                div.container
+//-                    div.navbar-header
+//-                        button.navbar-toggle(type='button',data-toggle='collapse',data-target=".navbar-responsive-collapse")
+//-                            span.sr-only Toggle Navigation
+//-                            span.fa.fa-bars
+//-                        a.navbar-brand(href='/')
+//-                            img(id='logo-header',src='/images/matthusar-dark-sm.png',alt='logo')
+//-                    div.collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
+//-                        div.container
+//-                            ul.nav.navbar-nav
+//-                                li
+//-                                    a(href='/') Home
+//-                                li
+//-                                    a(href='/portfolio') Portfolio
+//-                                li
+//-                                    a(href='/blog') Blog
+//-                                li.dropdown
+//-                                    a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown') Gallery
+//-                                    ul.dropdown-menu
+//-                                        li
+//-                                            a(href='/gallery/las-vegas') Las Vegas
+//-                                            a(href='/gallery/san-francisco') San Francisco
+//-                                            a(href='/gallery/los-angeles') Los Angeles
+//-                                            a(href='/gallery/japan') Japan
+//-                                li
+//-                                    a(href='/about-me') About Me

@@ -13,7 +13,7 @@ html
         //-link(rel='stylesheet', href='/stylesheets/blog.style.css')
         //-CSS Header and Footer
         link(rel='stylesheet', href='/stylesheets/header-default.min.css')
-        link(rel='stylesheet', href='/stylesheets/footer-v1.min.css')
+        link(rel='stylesheet', href='/stylesheets/footer-v3.min.css')
         //-CSS Implementing Plugins
         link(rel='stylesheet', href='/stylesheets/plugins/animate.min.css')
         link(rel='stylesheet', href='/plugins/line-icons/line-icons.min.css')
@@ -40,7 +40,7 @@ html
             div.header
                 div.container
                     a(href='/')
-                        img(src='/images/matthusar-dark-md.png',alt='logo',width='220px',height='77px')
+                        img(src='/images/matthusar-dark-md-2.png',alt='logo',width='200px',height='77px')
                     button.navbar-toggle(type='button',data-toggle='collapse',data-target=".navbar-responsive-collapse")
                         span.sr-only Toggle Navigation
                         span.fa.fa-bars
@@ -49,8 +49,8 @@ html
                         ul.nav.navbar-nav
                             li
                                 a(href='/') Home
-                            li
-                                a(href='/portfolio') Portfolio
+                            //-li
+                            //-   a(href='/portfolio') Portfolio
                             li
                                 a(href='/blog') Blog
                             li.dropdown
@@ -61,11 +61,37 @@ html
                                         a(href='/gallery/san-francisco') San Francisco
                                         a(href='/gallery/los-angeles') Los Angeles
                                         a(href='/gallery/japan') Japan
-                            li
-                                a(href='/about-me') About Me
 
-        block navbar
-        block content
+                            li.dropdown
+                                a.dropdown-toggle(href='javascript:void(0);',data-toggle='dropdown') About
+                                ul.dropdown-menu
+                                    li
+                                        a(href='/about-me') About Me
+                                        a(href='/about-this-site') About This Site
+
+            block navbar
+            block content
+
+            //-Footer
+            div.footer-v3(id='footer-v3')
+                div.copyright
+                    div.container
+                        div.row
+                            div.col-md-6
+                                p 2016 &copy; All Rights Reserved. Unify Them by <a target='_blank' href='https://twitter.com/htmlstream'> Htmlstream</a>
+                            div.col-md-6
+                                ul.social-icons.pull-right
+                                    li
+                                        a.rounded-x.social_facebook(href='' data-original-title='Facebook')
+                                    li
+                                        a.rounded-x.social_twitter(href='' data-original-title='Twitter')
+                                    li
+                                        a.rounded-x.social_googleplus(href='' data-original-title='Google Plus')
+                                    li
+                                        a.rounded-x.social_linkedin(href='' data-original-title='Linkedin')
+                                    li
+                                        a.rounded-x.social_github(href='' data-original-title='GitHub')
+            block footer
 
         //-JS Implementing Plugins - Global
         script(type='text/javascript',src='/javascripts/plugins/jquery.pjax.js')

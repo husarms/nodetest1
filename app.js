@@ -16,7 +16,9 @@ var galleryLasVegas = require('./routes/gallery/las-vegas');
 var galleryLosAngeles = require('./routes/gallery/los-angeles');
 var gallerySanFrancisco = require('./routes/gallery/san-francisco');
 var aboutMe = require('./routes/about-me');
+var aboutThisSite = require('./routes/about-this-site');
 var blogPostPageSpeedTest = require('./routes/blog-posts/page-speed-test');
+var blogPostJapanPart1 = require('./routes/blog-posts/japan-part-1');
 
 var app = express();
 
@@ -45,8 +47,10 @@ app.use('/gallery/las-vegas', galleryLasVegas);
 app.use('/gallery/los-angeles', galleryLosAngeles);
 app.use('/gallery/san-francisco', gallerySanFrancisco);
 app.use('/about-me',aboutMe);
+app.use('/about-this-site',aboutThisSite);
 app.use('/index',index);
 app.use('/blog/posts/page-speed-test',blogPostPageSpeedTest);
+app.use('/blog/posts/japan-part-1',blogPostJapanPart1);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

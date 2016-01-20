@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.renderPjax('blog-posts/page-speed-test', { title: 'Page Speed Battle' });
+    res.renderPjax('blog-posts/japan-part-1', { title: 'Japan Part 1' });
 });
 
 module.exports = router;

@@ -2,13 +2,20 @@ extends ../layout
 
 block content
     //-Breadcrumbs
-    //-div.breadcrumbs
-    //-   div.container
-    //-        h1.pull-left=title
+    div.breadcrumbs
+       div.container
+            h1.pull-left=title
+            ul.pull-right.breadcrumb
+                li
+                    a(href='/') Home
+                li
+                    a(href='/gallery') Gallery
+                li.active
+                    a(href='') San Francisco
     div.container.content
-        div.text-center.margin-bottom-50
-            h2.title-v2.title-center San Francisco
-            p.space-lg-hor If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+        //-div.text-center.margin-bottom-50
+        //-    h2.title-v2.title-center San Francisco
+        //-    p.space-lg-hor If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
         div.row.margin-bottom-30
             div.col-sm-4.sm-margin-bottom-30
                 a.fancybox.img-hover-v1(href='/images/gallery/san-francisco/san_francisco_1.jpg', rel='gallery1', title='Image 1')

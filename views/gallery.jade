@@ -1,0 +1,54 @@
+extends layout
+block content
+    //-Breadcrumbs
+    div.breadcrumbs
+        div.container
+            h1.pull-left=title
+    //-Content Part
+    div.container.content
+        //-Portfolio Sorting Blocks
+        div.sorting-block
+            div.content-xs
+                ul.sorting-nav.sorting-nav-v1.text-center
+                    li.filter(data-filter='all') All
+                    li.filter(data-filter='category_1') Travel
+                    li.filter(data-filter='category_2') Cars
+                    li.filter(data-filter='category_3') Japan
+            ul.row.sorting-grid
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_1(data-cat='1')
+                    a(href='/gallery/las-vegas')
+                        img.img-responsive(src='/images/gallery/las-vegas/las_vegas_7.jpg', alt ='')
+                        span.sorting-cover
+                            span Las Vegas
+                            p Neon lights and red rock canyons
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_1(data-cat='1')
+                    a(href='/gallery/san-francisco')
+                        img.img-responsive(src='/images/gallery/san-francisco/san_francisco_9.jpg', alt ='')
+                        span.sorting-cover
+                            span San Francisco
+                            p Steep hills and streetcars
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_1(data-cat='1')
+                    a(href='/gallery/los-angeles')
+                        img.img-responsive(src='/images/gallery/los-angeles/los_angeles_5.jpg', alt ='')
+                        span.sorting-cover
+                            span Los Angeles
+                            p Heavy traffic and movie stars
+                li.col-md-3.col-sm-6.col-xs-12.mix.category_1.category_3(data-cat='1')
+                    a(href='/gallery/japan')
+                        img.img-responsive(src='/images/gallery/japan/japan_13.jpg', alt ='')
+                        span.sorting-cover
+                            span Japan
+                            p Futuristic cities and ancient temples
+            div.clearfix
+
+    //-JS Implementing Plugins
+    script(type='text/javascript',src='/plugins/jquery.mixitup.min.js')
+    //-JS Page Level
+    script(type='text/javascript',src='/javascripts/pages/page_portfolio.js')
+    script(type='text/javascript',src='/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js')
+    script(type='text/javascript',src='/javascripts/plugins/cube-portfolio/cube-portfolio-lightbox.js')
+    script(type='text/javascript').
+        jQuery(document).ready(function () {
+            PortfolioPage.init();
+        });
+

@@ -20,6 +20,7 @@ var aboutMe = require('./routes/about-me');
 var aboutThisSite = require('./routes/about-this-site');
 var blogPostPageSpeedTest = require('./routes/blog-posts/page-speed-test');
 var blogPostJapanPart1 = require('./routes/blog-posts/japan-part-1');
+var blogPostAudioVisualizer = require('./routes/blog-posts/audio-visualizer');
 
 var app = express();
 
@@ -53,6 +54,7 @@ app.use('/about-this-site',aboutThisSite);
 app.use('/index',index);
 app.use('/blog/posts/page-speed-test',blogPostPageSpeedTest);
 app.use('/blog/posts/japan-part-1',blogPostJapanPart1);
+app.use('/blog/posts/audio-visualizer',blogPostAudioVisualizer);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

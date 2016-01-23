@@ -23,28 +23,35 @@ block content
                         ul.blog-grid-info.pull-left
                             li Matt Husar
                             li January 20, 2016
-                    img.img-responsive(src='/images/blog/audiovisualizer.png',alt='')
+                    //-img.img-responsive(src='/images/blog/audiovisualizer.png',alt='')
                 p A Javascript-based audio visualizer using Processing.js
-                div(id='canvas')
-                    canvas(id='AudioVisualizerSketch', data-processing-sources='/plugins/processing/AudioVisualizerSketch.js', style='height:auto; width: auto;')
-                        p Your browser does not support the canvas tag
-                    noscript
-                        p Javascript is required to view the contents of this page.
+                div(id='content')
+                    div(id='div_canvas')
+                        canvas(id='AudioVisualizerSketch', data-processing-sources='/plugins/processing/AudioVisualizerSketch.js', style='height:auto; width: auto;')
+                            p Your browser does not support the canvas tag
+                        noscript
+                            p Javascript is required to view the contents of this page.
                 p(id='Sources') Source code
-                    a(href='/plugins/processing/AudioVisualizerSketch.js' target='_blank') AudioVisualizerSketch
-                    a(href='/plugins/processing/maxim.js' target='_blank') maxim.js
+                    a(href='/plugins/processing/AudioVisualizerSketch.js' target='_blank') &nbsp;AudioVisualizerSketch
+                    a(href='/plugins/processing/maxim.js' target='_blank') &nbsp;maxim.js
                 p.
                     Built with <a href="http://processing.org" title="Processing" target="_blank">Processing</a>
                     and <a href="http://processingjs.org" title="Processing.js" target="_blank">Processing.js</a>
 
-
-    script(type='text/javascript',src='/plugins/processing/AudioVisualizerSketch.js')
+    //-Processing
+    script(type='text/javascript',src='/plugins/processing/processing.min.js')
     script(type='text/javascript',src='/plugins/processing/maxim.js')
+    script(type='text/javascript',src='/plugins/processing/AudioVisualizerSketch.js')
     script(type='text/javascript').
-        jQuery(document).ready(function () {
-            $(window).resize(function () {
-                var pjs = Processing.getInstanceById('AudioVisualizerSketch');
-                pjs.resizeSketch(document.getElementById('canvas').offsetWidth, document.getElementById('canvas').offsetHeight);
-            });
+        $(document).ready(function () {
+            $(window).resize(function(){
+                var sketch = Processing.getInstanceById('AudioVisualizerSketch');
+                if(!sketch){
+                    setTimeout($(window).resize,250);
+                }
+                else{
+                    sketch.resizeSketch(document.getElementById('div_canvas').offsetWidth,  document.getElementById('div_canvas').offsetHeight);
+                }
+            }
             $(window).resize();
         });

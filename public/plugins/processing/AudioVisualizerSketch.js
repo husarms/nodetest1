@@ -1,10 +1,10 @@
-Maxim maxim;
-AudioPlayer playerBeat;
-float[] spec;
-String[] tracks;
-int xPos;
-int currentTrack;
-bool isPlaying;
+var maxim;
+var playerBeat;
+var spec;
+var tracks;
+var xPos;
+var currentTrack;
+var isPlaying;
 
 void setup()
 {
@@ -16,41 +16,57 @@ void setup()
     currentTrack = 0;
 
     /* Populate array of track names */
-    //tracks = new Array("/assets/DrumKick.wav","HighHatBlues.wav","TimeOfTheSeason.wav","Cbat.wav","DrugsDen.wav","Cybotron.wav","atmos1.wav","RudeBoy.wav","Doomsday.wav");
-    tracks = new Array("/assets/HardAcid.wav");
+    tracks = new Array
+    (
+        "/plugins/processing/808Beat.wav",
+        "/plugins/processing/atmos1.wav",
+        "/plugins/processing/FunkGuitar.wav",
+        "/plugins/processing/HardAcid.wav",
+        "/plugins/processing/IAgainstI.wav",
+        "/plugins/processing/LondonCalling.wav",
+        "/plugins/processing/TimeOfTheSeason.wav",
+        "/plugins/processing/TrapLoop.mp3"
+    );
+    //tracks = new Array("/plugins/processing/808Beat.wav");
 
     /* Initialize and start player */
     maxim = new Maxim(this);
     playerBeat = maxim.loadFile(tracks[currentTrack]);
     playerBeat.setAnalysing(true);
     playerBeat.setLooping(true);
-    isPlaying = true;
+    isPlaying = false;
 }
 
 void draw()
 {
-    float ratio = 1;
-    float pow;
+    var ratio = 1;
+    var pow;
     background(0);
 
     // Start/stop audio player
-    if(isPlaying){
+    if(isPlaying)
+    {
         playerBeat.play();
     }
-    else{
+    else
+    {
+        playerBeat.play();
         playerBeat.stop();
     }
 
     /* Visualization */
     pow = playerBeat.getAveragePower();
     spec = playerBeat.getPowerSpectrum();
+
     //Tailor visible spectrum to screen size
     //float widthRatio = (width + 200)/1024;
-    float widthRatio = width/1024;
-    float heightRatio = height/45;
+    var widthRatio = width/1024;
+    var heightRatio = height/45;
     strokeWeight(6);
-    if (spec != null) {
-        for (int i = 0; i< spec.length; i++) {
+    if (spec != null)
+    {
+        for (var i = 0; i< spec.length; i++)
+        {
             //Draw an ellipse - diameter based on power
             //ellipse(i * widthRatio, (abs(spec[i]) * 10) - 100 * heightRatio, (pow *10), (pow *10));
             ellipse(i * widthRatio, ((abs(spec[i])) * heightRatio) - height, (pow + 2), (pow + 2));
@@ -61,24 +77,26 @@ void draw()
 
     //Label - Next Track
     noFill();
-    //stroke(200);
-    //rect(width - 150, +4, 146, 40);
-    //fill(200);
+    stroke(200);
+    rect(width - 150, +4, 146, 40);
+    fill(200);
     textSize(24);
-    if(isPlaying){
+    if(isPlaying)
+    {
         text("Click here to Pause", width - 225, 36);
     }
-    else{
+    else
+    {
         text("Click here to Play", width - 225, 36);
     }
 
     //Label - Display name of current track
-    //text(tracks[currentTrack], 50, 36);
+    text(tracks[currentTrack], 50, 36);
 
     /* Beat speed */
     if (mouseY > height*(5/6))
     {
-        ratio = (float) mouseX / (float) width;
+        ratio =  mouseX /  width;
         ratio *= 2;
         playerBeat.speed(ratio);
     }
@@ -93,35 +111,42 @@ void mousePressed()
 {
     /* Next Track */
     if (mouseY < height * (1/6)) {
-        //if (currentTrack < tracks.length - 1) {
-        //  currentTrack++;
-        // } else {
-        //   currentTrack = 0;
-        //  }
-
+        if (currentTrack < tracks.length - 1)
+        {
+            currentTrack++;
+        }
+        else
+        {
+            currentTrack = 0;
+        }
 
         isPlaying = !isPlaying;
 
-        //if(playerBeat.isPlaying){
-        //     playerBeat.stop();
-        // }
-        // else{
-        //     playerBeat = maxim.loadFile(tracks[currentTrack]);
-        //     playerBeat.setAnalysing(true);
-        //   playerBeat.setLooping(true);
-        //    playerBeat.play();
-        // }
+        if(playerBeat.isPlaying){
+            playerBeat.stop();
+        }
+        else{
+            playerBeat = maxim.loadFile(tracks[currentTrack]);
+            playerBeat.setAnalysing(true);
+            playerBeat.setLooping(true);
+            playerBeat.play();
+        }
         //Load the next track
-        //playerBeat.stop();
-        //playerBeat = maxim.loadFile(tracks[currentTrack]);
-        //playerBeat.setAnalysing(true);
-        //playerBeat.setLooping(true);
+        playerBeat.stop();
+        playerBeat = maxim.loadFile(tracks[currentTrack]);
+        playerBeat.setAnalysing(true);
+        playerBeat.setLooping(true);
     }
 }
 
-void resizeSketch(int w, int h) {
-    if (w < 680) {
-        size(w, floor(float(w)/600*600));
-    }else size(600,600);
-    //else size(680, 610 - 30);
+void resizeSketch(int w, int h)
+{
+    if (w < 680)
+    {
+        size(w, floor((w / 600) * 600));
+    }
+    else
+    {
+        size(600, 600);
+    }
 }

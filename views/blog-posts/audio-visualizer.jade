@@ -26,7 +26,7 @@ block content
                     //-img.img-responsive(src='/images/blog/audiovisualizer.png',alt='')
                 p A Javascript-based audio visualizer using Processing.js
                 div(id='content')
-                    div(id='div_canvas')
+                    div.responsive(id='div_canvas')
                         canvas(id='AudioVisualizerSketch', data-processing-sources='/plugins/processing/AudioVisualizerSketch.js', style='height:auto; width: auto;')
                             p Your browser does not support the canvas tag
                         noscript
@@ -46,12 +46,14 @@ block content
         $(document).ready(function () {
             $(window).resize(function(){
                 var sketch = Processing.getInstanceById('AudioVisualizerSketch');
+                var canvasWidth = document.getElementById('div_canvas').offsetWidth;
+                var canvasHeight = document.getElementById('div_canvas').offsetHeight;
                 if(!sketch){
                     setTimeout($(window).resize,250);
                 }
                 else{
-                    sketch.resizeSketch(document.getElementById('div_canvas').offsetWidth,  document.getElementById('div_canvas').offsetHeight);
+                    sketch.resizeSketch(canvasWidth, canvasHeight);
                 }
-            }
+            });
             $(window).resize();
         });

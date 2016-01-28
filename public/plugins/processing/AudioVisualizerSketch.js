@@ -8,7 +8,6 @@ var isPlaying;
 
 void setup()
 {
-    //size(1200, 700);
     size(600,600);
     background(0);
     frameRate(120);
@@ -27,7 +26,6 @@ void setup()
         "/plugins/processing/TimeOfTheSeason.wav",
         "/plugins/processing/TrapLoop.mp3"
     );
-    //tracks = new Array("/plugins/processing/808Beat.wav");
 
     /* Initialize and start player */
     maxim = new Maxim(this);
@@ -43,110 +41,98 @@ void draw()
     var pow;
     background(0);
 
-    // Start/stop audio player
-    if(isPlaying)
+    if (isPlaying)
     {
         playerBeat.play();
-    }
-    else
-    {
-        playerBeat.play();
-        playerBeat.stop();
-    }
 
-    /* Visualization */
-    pow = playerBeat.getAveragePower();
-    spec = playerBeat.getPowerSpectrum();
+        /* Visualization */
+        pow = playerBeat.getAveragePower();
+        spec = playerBeat.getPowerSpectrum();
 
-    //Tailor visible spectrum to screen size
-    //float widthRatio = (width + 200)/1024;
-    var widthRatio = width/1024;
-    var heightRatio = height/45;
-    strokeWeight(6);
-    if (spec != null)
-    {
-        for (var i = 0; i< spec.length; i++)
-        {
-            //Draw an ellipse - diameter based on power
-            //ellipse(i * widthRatio, (abs(spec[i]) * 10) - 100 * heightRatio, (pow *10), (pow *10));
-            ellipse(i * widthRatio, ((abs(spec[i])) * heightRatio) - height, (pow + 2), (pow + 2));
-            //Color based on spectrum
-            stroke(1500* spec[i]);
+        //Tailor visible spectrum to screen size
+        //float widthRatio = (width + 200)/1024;
+        var widthRatio = width / 1024;
+        var heightRatio = height / 45;
+        strokeWeight(6);
+        if (spec != null) {
+            for (var i = 0; i < spec.length; i++) {
+                //Draw an ellipse - diameter based on power
+                //ellipse(i * widthRatio, (abs(spec[i]) * 10) - 100 * heightRatio, (pow *10), (pow *10));
+                ellipse(i * widthRatio, ((abs(spec[i])) * heightRatio) - height, (pow + 2), (pow + 2));
+                //Color based on spectrum
+                stroke(1500 * spec[i]);
+            }
         }
+
+        /* Beat speed - lower 1/6 */
+        if (mouseY > height * (5/6))
+        {
+            ratio =  mouseX /  width;
+            ratio *= 2;
+            playerBeat.speed(ratio);
+        }
+
+        //Label - Display speed
+        textSize(18);
+        text("Mouse left and right to change speed: " + round(ratio * 100), 20 , height - 20);
     }
 
     //Label - Next Track
-    noFill();
-    stroke(200);
-    rect(width - 150, +4, 146, 40);
-    fill(200);
+    //noFill();
+    //stroke(200);
+    //rect(width - 150, +4, 146, 40);
+    //fill(200);
     textSize(24);
+    text("Next track >>", width * (3/4), 36);
     if(isPlaying)
     {
-        text("Click here to Pause", width - 225, 36);
+        text("Click here to Pause", 10, 36);
     }
     else
     {
-        text("Click here to Play", width - 225, 36);
+        text("Click here to Play", 10, 36);
     }
 
     //Label - Display name of current track
-    text(tracks[currentTrack], 50, 36);
-
-    /* Beat speed */
-    if (mouseY > height*(5/6))
-    {
-        ratio =  mouseX /  width;
-        ratio *= 2;
-        playerBeat.speed(ratio);
-    }
-
-    //Label - Display speed
-    textSize(18);
-    text("Mouse left and right to change speed: " + round(ratio * 100), 20 , height - 20);
+    text(tracks[currentTrack], 10, 80);
 }
 
 
 void mousePressed()
 {
-    /* Next Track */
-    if (mouseY < height * (1/6)) {
-        if (currentTrack < tracks.length - 1)
-        {
-            currentTrack++;
+    //Top 1/6, left half - play/pause
+    if ((mouseY < height * (1/6)) && (mouseX < width * (1/2)))
+    {
+        isPlaying = !isPlaying;
+
+        if (!isPlaying){
+            playerBeat.stop();
         }
         else
         {
-            currentTrack = 0;
-        }
-
-        isPlaying = !isPlaying;
-
-        if(playerBeat.isPlaying){
-            playerBeat.stop();
-        }
-        else{
-            playerBeat = maxim.loadFile(tracks[currentTrack]);
-            playerBeat.setAnalysing(true);
-            playerBeat.setLooping(true);
             playerBeat.play();
         }
-        //Load the next track
-        playerBeat.stop();
+    }
+
+    //Top 1/6, right half - next track
+    if ((mouseY < height * (1/6)) && (mouseX > width * (1/2)))
+    {
+        if (currentTrack < tracks.length - 1) {
+            currentTrack++;
+        }
+        else {
+            currentTrack = 0;
+        }
+        if (isPlaying)
+        {
+            playerBeat.stop();
+        }
         playerBeat = maxim.loadFile(tracks[currentTrack]);
-        playerBeat.setAnalysing(true);
-        playerBeat.setLooping(true);
     }
 }
 
 void resizeSketch(int w, int h)
 {
-    if (w < 680)
-    {
-        size(w, floor((w / 600) * 600));
-    }
-    else
-    {
-        size(600, 600);
-    }
+    size(w, h);
+    scale(w/600, h/600);
 }

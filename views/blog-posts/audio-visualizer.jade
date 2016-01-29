@@ -15,7 +15,7 @@ block content
     //-End Breadcrumbs
     div.container.content
         div.row
-            div.col-md-10.col-md-offset-1
+            div.col-md-12
                 //-Blog grid
                 div.blog-grid.margin-bottom-30
                     h2.blog-grid-title-lg=title
@@ -24,19 +24,33 @@ block content
                             li Matt Husar
                             li January 20, 2016
                     //-img.img-responsive(src='/images/blog/audiovisualizer.png',alt='')
-                p A Javascript-based audio visualizer using Processing.js
-                div(id='content')
-                    div.responsive(id='div_canvas')
-                        canvas(id='AudioVisualizerSketch', data-processing-sources='/plugins/processing/AudioVisualizerSketch.js', style='height:auto; width: auto;')
-                            p Your browser does not support the canvas tag
-                        noscript
-                            p Javascript is required to view the contents of this page.
-                p(id='Sources') Source code
-                    a(href='/plugins/processing/AudioVisualizerSketch.js' target='_blank') &nbsp;AudioVisualizerSketch
-                    a(href='/plugins/processing/maxim.js' target='_blank') &nbsp;maxim.js
-                p.
-                    Built with <a href="http://processing.org" title="Processing" target="_blank">Processing</a>
-                    and <a href="http://processingjs.org" title="Processing.js" target="_blank">Processing.js</a>
+                div.col-md-10(id='content')
+                    div.news-v3.margin-bottom-30
+                        div.news-v3-in.responsive
+                            p A Javascript-based audio visualizer using Processing
+                            div.responsive-video
+                                <iframe src="https://player.vimeo.com/video/101268614" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            p
+                                <a href="https://vimeo.com/101268614">Audio Visualizer Sketch</a> from <a href="https://vimeo.com/user29893555">Matt Husar</a> on <a href="https://vimeo.com">Vimeo</a>.
+                    div.news-v3.margin-bottom-30
+                        div.news-v3-in.responsive
+                            div.row
+                                a.btn-u.pull-left(id='btnTogglePlayer') <i class="fa fa-play"></i> Play
+                                a.btn-u.pull-right(id='btnNextTrack') <i class="fa fa-step-forward"></i> Next Track
+                            div.row
+                                div.img-responsive(id='div_canvas')
+                                    br
+                                    canvas(id='AudioVisualizerSketch', data-processing-sources='/plugins/processing/AudioVisualizerSketch.js', style='height:auto; width: auto;')
+                                        p Your browser does not support the canvas tag
+                                    noscript
+                                        p Javascript is required to view the contents of this page.
+                            div.row
+                                p(id='Sources') Source code
+                                    a(href='/plugins/processing/AudioVisualizerSketch.js' target='_blank') &nbsp;AudioVisualizerSketch
+                                    a(href='/plugins/processing/maxim.js' target='_blank') &nbsp;maxim.js
+                                p.
+                                    Built with <a href="http://processing.org" title="Processing" target="_blank">Processing</a>
+                                    and <a href="http://processingjs.org" title="Processing.js" target="_blank">Processing.js</a>
 
     //-Processing
     script(type='text/javascript',src='/plugins/processing/processing.min.js')
@@ -44,6 +58,7 @@ block content
     script(type='text/javascript',src='/plugins/processing/AudioVisualizerSketch.js')
     script(type='text/javascript').
         $(document).ready(function () {
+            //var sketch = Processing.getInstanceById('AudioVisualizerSketch');
             $(window).resize(function(){
                 var sketch = Processing.getInstanceById('AudioVisualizerSketch');
                 var canvasWidth = document.getElementById('div_canvas').offsetWidth;
@@ -54,6 +69,21 @@ block content
                 else{
                     sketch.resizeSketch(canvasWidth, canvasHeight);
                 }
+            });
+            $('#btnTogglePlayer').click(function(){
+                var btnHtml = $('#btnTogglePlayer').html();
+                var sketch = Processing.getInstanceById('AudioVisualizerSketch');
+                sketch.togglePlayer();
+                if(btnHtml == '<i class="fa fa-play"></i> Play') {
+                    $('#btnTogglePlayer').html('<i class="fa fa-pause"></i> Pause');
+                }
+                else{
+                    $('#btnTogglePlayer').html('<i class="fa fa-play"></i> Play');
+                }
+            });
+            $('#btnNextTrack').click(function () {
+                var sketch = Processing.getInstanceById('AudioVisualizerSketch');
+                sketch.nextTrack();
             });
             $(window).resize();
         });

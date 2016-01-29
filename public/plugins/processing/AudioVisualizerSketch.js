@@ -5,10 +5,13 @@ var tracks;
 var xPos;
 var currentTrack;
 var isPlaying;
+var divWidth = 800;
+var divHeight = 600
+var sizeRatio = 1;
 
 void setup()
 {
-    size(600,600);
+    size(divWidth, divHeight);
     background(0);
     frameRate(120);
     xPos = 0;
@@ -50,10 +53,9 @@ void draw()
         spec = playerBeat.getPowerSpectrum();
 
         //Tailor visible spectrum to screen size
-        //float widthRatio = (width + 200)/1024;
-        var widthRatio = width / 1024;
-        var heightRatio = height / 45;
-        strokeWeight(6);
+        var widthRatio = (width / 2000) * sizeRatio;
+        var heightRatio = (height / 50) * sizeRatio;
+        strokeWeight(6 * sizeRatio);
         if (spec != null) {
             for (var i = 0; i < spec.length; i++) {
                 //Draw an ellipse - diameter based on power
@@ -77,62 +79,50 @@ void draw()
         text("Mouse left and right to change speed: " + round(ratio * 100), 20 , height - 20);
     }
 
-    //Label - Next Track
-    //noFill();
-    //stroke(200);
-    //rect(width - 150, +4, 146, 40);
-    //fill(200);
-    textSize(24);
-    text("Next track >>", width * (3/4), 36);
-    if(isPlaying)
-    {
-        text("Click here to Pause", 10, 36);
+    //Label - Display name of current track
+    textSize(24 * sizeRatio);
+    text(tracks[currentTrack], 10 * sizeRatio, 36 * sizeRatio);
+    text("width: " + width + " height: " + height, 10 * sizeRatio, 70 * sizeRatio);
+}
+
+void togglePlayer()
+{
+    isPlaying = !isPlaying;
+
+    if (!isPlaying){
+        playerBeat.stop();
     }
     else
     {
-        text("Click here to Play", 10, 36);
+        playerBeat.play();
     }
-
-    //Label - Display name of current track
-    text(tracks[currentTrack], 10, 80);
 }
 
+void nextTrack()
+{
+    if (currentTrack < tracks.length - 1) {
+        currentTrack++;
+    }
+    else {
+        currentTrack = 0;
+    }
+    if (isPlaying)
+    {
+        playerBeat.stop();
+    }
+    playerBeat = maxim.loadFile(tracks[currentTrack]);
+}
 
 void mousePressed()
 {
-    //Top 1/6, left half - play/pause
-    if ((mouseY < height * (1/6)) && (mouseX < width * (1/2)))
-    {
-        isPlaying = !isPlaying;
-
-        if (!isPlaying){
-            playerBeat.stop();
-        }
-        else
-        {
-            playerBeat.play();
-        }
-    }
-
-    //Top 1/6, right half - next track
-    if ((mouseY < height * (1/6)) && (mouseX > width * (1/2)))
-    {
-        if (currentTrack < tracks.length - 1) {
-            currentTrack++;
-        }
-        else {
-            currentTrack = 0;
-        }
-        if (isPlaying)
-        {
-            playerBeat.stop();
-        }
-        playerBeat = maxim.loadFile(tracks[currentTrack]);
-    }
+    //
 }
 
 void resizeSketch(int w, int h)
 {
-    size(w, h);
-    scale(w/600, h/600);
+    sizeRatio = w / 800;
+    divWidth = 800 * sizeRatio;
+    divHeight = 600 * sizeRatio;
+    size(divWidth, divHeight);
+    scale(800 / divWidth, 600 / divHeight);
 }

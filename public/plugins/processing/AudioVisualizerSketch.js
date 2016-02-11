@@ -8,6 +8,10 @@ var isPlaying;
 var divWidth = 800;
 var divHeight = 600
 var sizeRatio = 1;
+var minPow = 0;
+var maxPow = 0;
+var minSpec = 0;
+var maxSpec = -100;
 
 void setup()
 {
@@ -46,23 +50,50 @@ void draw()
 
     if (isPlaying)
     {
+        playerBeat.setAnalysing(true);
+        playerBeat.setLooping(true);
         playerBeat.play();
 
         /* Visualization */
         pow = playerBeat.getAveragePower();
         spec = playerBeat.getPowerSpectrum();
 
+        /*
+        pow range: (-0.76 to 0.25)
+
+        spec[i] range: (-268 to -21)
+
+        spec.length = 1024
+
+         */
+
         //Tailor visible spectrum to screen size
-        var widthRatio = (width / 2000) * sizeRatio;
-        var heightRatio = (height / 50) * sizeRatio;
+        var widthRatio = width / 1024;//based on spec.length = 1024
+        var heightRatio = height / 135;//based on max abs(spec[i]) = 268
+
         strokeWeight(6 * sizeRatio);
+
         if (spec != null) {
             for (var i = 0; i < spec.length; i++) {
-                //Draw an ellipse - diameter based on power
-                //ellipse(i * widthRatio, (abs(spec[i]) * 10) - 100 * heightRatio, (pow *10), (pow *10));
-                ellipse(i * widthRatio, ((abs(spec[i])) * heightRatio) - height, (pow + 2), (pow + 2));
+
+                //Draw an ellipse(x, y, width, height) - diameter based on power
+                ellipse(i * widthRatio, abs(spec[i]) * heightRatio, (pow * sizeRatio) + 0, (pow * sizeRatio) + 0);
+
                 //Color based on spectrum
-                stroke(1500 * spec[i]);
+                stroke(1000 * spec[i]);
+
+                if(pow > maxPow){
+                    maxPow = pow;
+                }
+                if(pow < minPow){
+                    minPow = pow;
+                }
+                if(spec[i] > maxSpec){
+                    maxSpec = spec[i];
+                }
+                if(spec[i] < minSpec){
+                    minSpec = spec[i];
+                }
             }
         }
 
@@ -75,14 +106,16 @@ void draw()
         }
 
         //Label - Display speed
-        textSize(18);
-        text("Mouse left and right to change speed: " + round(ratio * 100), 20 , height - 20);
+        textSize(18 * sizeRatio);
+        text("Mouse left and right to change speed: " + round(ratio * 100), 20 , height - 10);
     }
 
     //Label - Display name of current track
     textSize(24 * sizeRatio);
     text(tracks[currentTrack], 10 * sizeRatio, 36 * sizeRatio);
-    text("width: " + width + " height: " + height, 10 * sizeRatio, 70 * sizeRatio);
+    //text("width: " + width + " height: " + height, 10 * sizeRatio, 70 * sizeRatio);
+    //text("minPow:: " + minPow + " maxPow: " + maxPow, 10 * sizeRatio, 100 * sizeRatio);
+    //text("minSpec: " + minSpec + " maxSpec: " + maxSpec, 10 * sizeRatio, 130 * sizeRatio);
 }
 
 void togglePlayer()

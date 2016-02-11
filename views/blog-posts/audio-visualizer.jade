@@ -38,7 +38,7 @@ block content
                                 a.btn-u.pull-left(id='btnTogglePlayer') <i class="fa fa-play"></i> Play
                                 a.btn-u.pull-right(id='btnNextTrack') <i class="fa fa-step-forward"></i> Next Track
                             div.row
-                                div.img-responsive(id='div_canvas')
+                                div.img-responsive(id='div_canvas', style='offsetWidth:900; offsetHeight:700;')
                                     br
                                     canvas(id='AudioVisualizerSketch', data-processing-sources='/plugins/processing/AudioVisualizerSketch.js', style='height:auto; width: auto;')
                                         p Your browser does not support the canvas tag
@@ -58,7 +58,7 @@ block content
     script(type='text/javascript',src='/plugins/processing/AudioVisualizerSketch.js')
     script(type='text/javascript').
         $(document).ready(function () {
-            //var sketch = Processing.getInstanceById('AudioVisualizerSketch');
+
             $(window).resize(function(){
                 var sketch = Processing.getInstanceById('AudioVisualizerSketch');
                 var canvasWidth = document.getElementById('div_canvas').offsetWidth;
@@ -85,5 +85,9 @@ block content
                 var sketch = Processing.getInstanceById('AudioVisualizerSketch');
                 sketch.nextTrack();
             });
+        });
+
+        $(window).load(function () {
+            // executes when complete page is fully loaded, including all frames, objects and images
             $(window).resize();
         });

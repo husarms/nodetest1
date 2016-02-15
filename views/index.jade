@@ -54,6 +54,8 @@ block content
     //            div.call-action-v1-in.inner-btn.page-scroll
     //                a.btn-u.btn-brd.btn-brd-hover.btn-u-dark.btn-u-block(href='/about-me') About Me
 
+    //-Move everything down to make it work with header
+    //-div.margin-bottom-30
     //-Slider - Creative
     div.tp-banner-container
         div.tp-banner
@@ -62,6 +64,7 @@ block content
                 li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Slide 1')
                     //-Main Image
                     img(src='/images/gallery/las-vegas/las_vegas_14.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
+                    //-img(src='/images/sliders/7.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
                     //-Layer
                     div.tp-caption.re-title-v1.sft.start(data-x='center',
                         data-hoffset='0',
@@ -101,6 +104,7 @@ block content
                 li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Slide 2')
                     //-Main Image
                     img(src='/images/gallery/japan/japan_41.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
+                    //-img(src='/images/sliders/9.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
                     //-Layer
                     div.tp-caption.re-title-v2.sft.start(data-x='center',
                     data-hoffset='0',
@@ -116,7 +120,7 @@ block content
                     //-Layer
                     div.tp-caption.re-text-v1.sft(data-x='center',
                     data-hoffset='0',
-                    data-y='200',
+                    data-y='160',
                     data-speed='1400',
                     data-start='2000',
                     data-easing='Power4.easeInOut',
@@ -141,6 +145,7 @@ block content
                 li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Slide 3')
                     //-Main Image
                     img(src='/images/gallery/misc/santa_monica_1.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
+                    //-img(src='/images/sliders/8.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
                     //-Layer
                     div.tp-caption.re-title-v2.sft.start(data-x='20',
                     data-hoffset='0',
@@ -203,12 +208,16 @@ block content
 
 
     //-JS Implementing Plugins
+    script(type='text/javascript',src='/plugins/jquery.parallax.js')
+    script(type='text/javascript',src='/plugins/counter/jquery.counterup.min.js')
     script(type='text/javascript',src='/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')
     script(type='text/javascript',src='/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')
     //-JS Page Level
     script(type='text/javascript',src='/javascripts/plugins/revolution-slider.js')
     script(type='text/javascript').
         jQuery(document).ready(function () {
-            RevolutionSlider.initRSfullWidth();
+            App.initCounter();
+            App.initParallaxBg();
+            RevolutionSlider.initRSfullScreenOffset();
         });
 

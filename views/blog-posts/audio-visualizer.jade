@@ -26,12 +26,26 @@ block content
                     //-img.img-responsive(src='/images/blog/audiovisualizer.png',alt='')
                 div.col-md-10(id='content')
                     div.news-v3.margin-bottom-30
+                        p.
+                            Awhile back I took a Coursera class offered through the University of London called <a href='https://www.coursera.org/course/digitalmedia', target='_blank'>Creative Programming for Digital Media & Mobile Apps.</a>
+                            The course focused on applying programming to the development of creative works that make use of graphics and audio.
+                        p.
+                            The format consisted of a series of lectures each week, walking you through building some type of application (a music player, a game, a photo editor, etc).
+                            You were then asked to create your own application that built on the skills and concepts that were covered that week.
+                        p.
+                            Grading for assignments was pretty cool - you’d create a quick video demo of your application and share it with the class.
+                            Other students would review your work and offer feedback - ultimately determining your grade.
+                        p.
+                            Here is the demo I created for one of those assignments - an audio visualizer written in Javascript using <a href='https://processingjs.org/',target='_blank'>Processing.js</a> -
                         div.news-v3-in.responsive
-                            p A Javascript-based audio visualizer using Processing
                             div.responsive-video
                                 <iframe src="https://player.vimeo.com/video/101268614" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             p
                                 <a href="https://vimeo.com/101268614">Audio Visualizer Sketch</a> from <a href="https://vimeo.com/user29893555">Matt Husar</a> on <a href="https://vimeo.com">Vimeo</a>.
+                    div.news-v3.margin-bottom-30
+                        p.
+                            Below is the audio visualizer itself - along with the source code. I’ve modified it a bit since taking the course to make it work with a responsive website -
+                            but the code for the actual visualization is essentially the same.
                     div.news-v3.margin-bottom-30
                         div.news-v3-in.responsive
                             div.row
@@ -51,6 +65,9 @@ block content
                                 p.
                                     Built with <a href="http://processing.org" title="Processing" target="_blank">Processing</a>
                                     and <a href="http://processingjs.org" title="Processing.js" target="_blank">Processing.js</a>
+                        p.small.
+                            <br/>* Please note this does not work on mobile - I believe it has something to do with the loading / playing of the audio files -  still trying to figure that out.
+
 
     //-Processing
     script(type='text/javascript',src='/plugins/processing/processing.min.js')

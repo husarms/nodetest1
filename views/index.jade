@@ -1,61 +1,6 @@
 extends layout
 
 block content
-    //-Slider
-    //div.tp-banner-container
-    //    div.tp-banner
-    //        ul
-    //            //-Slide
-    //            li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Title1')
-    //                //-Main Image
-    //                img(src='/images/gallery/las-vegas/las_vegas_14.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='left top',data-bgrepeat='no-repeat')
-    //                div.tp-caption.revolution-ch1.sft.start(data-x='center',
-    //                    data-hoffset='0',
-    //                    data-y='100',
-    //                    data-speed='1500',
-    //                    data-start='500',
-    //                    data-easing='Back.easeInOut',
-    //                    data-endeasing='Power1.easIn',
-    //                    data-endspeed='300').
-    //                        Insert dramatic headline statement here
-    //                //-Layer
-    //                div.tp-caption.revolution-ch2.sft(data-x='center',
-    //                data-hoffset='0',
-    //                data-y='190',
-    //                data-speed='1400',
-    //                data-start='2000',
-    //                data-easing='Power4.easeInOut',
-    //                data-endeasing='Power1.easIn',
-    //                data-endspeed='300',
-    //                data-captionhidden='off',
-    //                style='z-index: 6').
-    //                    Maybe a slightly less important statement here
-    //                //-Layer
-    //                div.tp-caption.sft(data-x='center',
-    //                data-hoffset='0',
-    //                data-y='350',
-    //                data-speed='1600',
-    //                data-start='2800',
-    //                data-easing='Power4.easeInOut',
-    //                data-endeasing='Power1.easIn',
-    //                data-endspeed='300',
-    //                data-captionhidden='off',
-    //                style='z-index: 6')
-    //                    a.btn-u.btn-brd.btn-brd-hover.btn-u-light(href='/blog') Go to Blog
-    //                    a.btn-u.btn-brd.btn-brd-hover.btn-u-(href='/gallery') About Me
-    //        div.tp-bannertime.tp-bottom
-
-    //-Call to action
-    //div.call-action-v1.bg-light
-    //    div.container
-    //        div.call-action-v1-box
-    //            div.call-action-v1-in
-    //                p Hello, my name is Matt and I'm a software developer. Welcome to my temple of shameless self promotion.
-    //            div.call-action-v1-in.inner-btn.page-scroll
-    //                a.btn-u.btn-brd.btn-brd-hover.btn-u-dark.btn-u-block(href='/about-me') About Me
-
-    //-Move everything down to make it work with header
-    //-div.margin-bottom-30
     //-Slider - Creative
     div.tp-banner-container
         div.tp-banner
@@ -64,7 +9,6 @@ block content
                 li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Slide 1')
                     //-Main Image
                     img(src='/images/gallery/las-vegas/las_vegas_14.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
-                    //-img(src='/images/sliders/7.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
                     //-Layer
                     div.tp-caption.re-title-v1.sft.start(data-x='center',
                         data-hoffset='0',
@@ -104,7 +48,6 @@ block content
                 li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Slide 2')
                     //-Main Image
                     img(src='/images/gallery/japan/japan_41.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
-                    //-img(src='/images/sliders/9.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
                     //-Layer
                     div.tp-caption.re-title-v2.sft.start(data-x='center',
                     data-hoffset='0',
@@ -145,7 +88,6 @@ block content
                 li.revolution-mch-1(data-transition='fade',data-slotamount='5',data-masterspeed='1000',data-title='Slide 3')
                     //-Main Image
                     img(src='/images/gallery/misc/santa_monica_1.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
-                    //-img(src='/images/sliders/8.jpg',alt='darkblurbg',data-bgfit='cover',data-bgposition='center center',data-bgrepeat='no-repeat')
                     //-Layer
                     div.tp-caption.re-title-v2.sft.start(data-x='20',
                     data-hoffset='0',
@@ -188,12 +130,15 @@ block content
             div.container.content
                 div.row
                     div.col-md-6
-                        h1 Javascript Audio Visualizer
-                        p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus..
-                        p Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat
-                        a.btn-u.btn-u-green.one-page-btn(href='/blog/posts/audio-visualizer') Go to Post
-                    div.col-md-6
                         img.img-repsonsive.margin-bottom-10(src='/images/blog/audiovisualizer.png',alt='',height='100%',width='100%')
+                    div.col-md-6
+                        h1 Javascript Audio Visualizer
+                        p.
+                            Awhile back I took a Coursera class offered through the University of London called <a href='https://www.coursera.org/course/digitalmedia', target='_blank'>Creative Programming for Digital Media & Mobile Apps.</a>
+                            The course focused on applying programming to the development of creative works that make use of graphics and audio.
+                        p.
+                            Here is a demo I created for one of those assignments - an audio visualizer written in Javascript using <a href='https://processingjs.org/',target='_blank'>Processing.js</a>.
+                        a.btn-u.btn-u-sea.one-page-btn.margin-top-20(href='/blog/posts/audio-visualizer') Go to Post
         //-Gallery
         div.one-page-inner.one-default
             div.container.content
@@ -203,7 +148,7 @@ block content
                     div.col-md-6
                         h1 Gallery
                         p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus..
-                        a.btn-u.btn-u-green.one-page-btn(href='/gallery') Go to Gallery
+                        a.btn-u.btn-u-sea.one-page-btn.margin-top-20(href='/gallery') Go to Gallery
 
 
 

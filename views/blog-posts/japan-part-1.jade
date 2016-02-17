@@ -2,9 +2,14 @@ extends ../layout
 
 block content
     //-Breadcrumbs
+    //div.breadcrumbs-v1.img-japan-1
+    //    div.container
+    //        span Blog
+    //        h1 Japan Part 1
     div.breadcrumbs
         div.container
-            h1.pull-left Blog
+            a(href='/blog')
+                h1.pull-left Blog
             ul.pull-right.breadcrumb
                 li
                     a(href='/') Home
@@ -13,157 +18,76 @@ block content
                 li.active
                     a(href='')=title
     //-End Breadcrumbs
-    div.container.content
-        div.row
-            div.col-md-10.col-md-offset-1
-                //-Blog grid
-                div.blog-grid.margin-bottom-30
-                    h2.blog-grid-title-lg=title
-                    div.overflow-h.margin-bottom-10
-                        ul.blog-grid-info.pull-left
+    div.container.content-sm
+        div.news-v3.margin-bottom-60
+            //div.news-v3-in.bg-color-darker
+            //    h2.Title=title + ' - Arrival'
+            //    ul.list-inline.posted-info
+            //        li Matt Husar
+            //        li January 20, 2016
+            //img.img-responsive.full-width(src='/images/gallery/misc/japan_1.jpg',alt='')
+            div.news-v3-in.bg-color-darker
+                div.row
+                    div.col-md-10.col-md-offset-1
+                        h2.Title=title + ' - Arrival'
+                        ul.list-inline.posted-info
                             li Matt Husar
                             li January 20, 2016
-                img.img-responsive.margin-bottom-30(src='/images/gallery/misc/japan_1.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/1.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/2.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/3.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/4.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/5.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/6.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/7.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/8.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/9.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/10.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/11.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/12.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/13.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/14.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/15.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/16.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/17.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/18.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/19.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/20.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/21.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/22.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/23.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/24.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/25.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/26.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/27.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/28.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/29.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/30.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/31.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/32.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/33.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/34.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
-                img.img-responsive.margin-bottom-30(src='/images/gallery/japan/part-1/35.jpg',alt='')
-                p.
-                    Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non.
-                    Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit.
+                        br
+                        p.
+                            In 2011 I had the opportunity to spend a few months in Japan. It was an amazing experience - if you've ever thought of going I would highly recommend it.
+                            I took a ton of pictures while I was over there, but never had a chance to put a narrative behind them.
+                        p Well - I am finally getting around to doing just that. Due to the amount of content I will be breaking this up into multiple parts.
+                        p So without further ado this is part 1.
+                        //img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/1.jpg',alt='')
+                        //p.
+                        //    Arriving in Narita after 14 hour flight.
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/2.jpg',alt='')
+                        p.
+                            Going through Narita airport.
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/5.jpg',alt='')
+                        p.
+                            View from Narita airport rest house.
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/4.jpg',alt='')
+                        p.
+                            President Obama on TV
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/6.jpg',alt='')
+                        p.
+                            Shops in Narita
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/15.jpg',alt='')
+                        p.
+                            The Japanese McDonald's exclusive "Mega Muffin" - double sausage and bacon, egg, cheese and lots of ketchup
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/8.jpg',alt='')
+                        p.
+                            Narita station
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/10.jpg',alt='')
+                        p.
+                            Catching the Shinkansen in Shinigawa
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/28.jpg',alt='')
+                        p.
+                            Inside the Shikansen. These things are honestly amazing. They are super quick and quiet.
+                            This picture also gives a good idea of how spacious and comfortable the interiors are.
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/16.jpg',alt='')
+                        p.
+                            Admiring some vending machines in Shinigawa
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/26.jpg',alt='')
+                        p.
+                            Train station in Toyko
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/21.jpg',alt='')
+                        p.
+                            Fuji off in the distance
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/23.jpg',alt='')
+                        p.
+                            At a grocery story in Okayama
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/24.jpg',alt='')
+                        p.
+                            Beer aisle
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/11.jpg',alt='')
+                        p.
+                            More vending machines in Okayama
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/27.jpg',alt='')
+                        p.
+                            Food display
+                        img.img-responsive.margin-bottom-30(src='/images/gallery/japan/japan-part-1/20.jpg',alt='')
+                        p.
+                            Catching our last train in Tottori

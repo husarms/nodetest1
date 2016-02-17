@@ -118,6 +118,12 @@
   background-size: cover; /*Scales the background image to be as large as possible*/
 }
 
+.breadcrumbs-v1.img-japan-1 {
+  background: url(../images/breadcrumbs/japan1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 .breadcrumbs-v1:after {
   top: 0;
   left: 0;

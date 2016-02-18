@@ -1,12 +1,14 @@
 extends layout
 
 block content
-  div.content
-    h1.title-v2.title-center= error.status + ' - ' + message + ' (-_-* )'
-    h2.title-v2.title-center
-        a(href='/', alt='') Take me back home
+    div.content
+        h1.title-v2.title-center= error.status + ' - ' + message + ' (-_-* )'
+        h2.title-v2.title-center
+            a(href='/', alt='') Take me back home
     //pre #{error.stack}
-    div.col-md-8.col-md-offset-2
-      p #{error.stack}
+    div.container
+        div.row
+            div.col-md-8.col-md-offset-2.margin-bottom-40
+                p #{error.stack}
 
 

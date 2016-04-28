@@ -21,6 +21,7 @@ var aboutThisSite = require('./routes/about-this-site');
 var blogPostPageSpeedTest = require('./routes/blog-posts/page-speed-test');
 var blogPostJapanPart1 = require('./routes/blog-posts/japan-part-1');
 var blogPostAudioVisualizer = require('./routes/blog-posts/audio-visualizer');
+var blogPostInstagramAPI = require('./routes/blog-posts/instagram-api');
 
 var app = express();
 
@@ -55,6 +56,7 @@ app.use('/index',index);
 app.use('/blog/posts/page-speed-test',blogPostPageSpeedTest);
 app.use('/blog/posts/japan-part-1',blogPostJapanPart1);
 app.use('/blog/posts/audio-visualizer',blogPostAudioVisualizer);
+app.use('/blog/posts/instagram-api',blogPostInstagramAPI);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

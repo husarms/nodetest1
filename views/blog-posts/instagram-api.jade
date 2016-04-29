@@ -26,7 +26,7 @@ block content
                 div.row
                     div.col-md-10.col-md-offset-1
                         div(ng-app="myApp" ng-controller="myCtrl")
-                            img.img-responsive.margin-bottom-20(src='/images/blog/instagram-api/instagram-title.png',alt='')
+                            //-img.img-responsive.margin-bottom-20(src='/images/blog/instagram-api/instagram-title.png',alt='')
                             h2.Title=title
                                 small &nbsp;
                             ul.list-inline.posted-info
@@ -52,7 +52,7 @@ block content
                                         div.input-group
                                             span.input-group-btn
                                                 button.btn-u.btn-brd-hover(type="button",ng-click='getTagData()') <i class="fa fa-search"></i> Search Tags
-                                            input.form-control(type="text", placeholder="Enter a tag name", ng-model="searchQuery")
+                                            input.form-control(type="text", placeholder="Enter a tag name", ng-model="searchQuery", maxlength="30")
                                     div.alert.alert-warning(ng-hide="message == null")
                                         a.close(ng-click="message = null", aria-label="close") &times;
                                         p {{message}}
@@ -117,7 +117,6 @@ block content
                             h3 Issuing a request
                             p.
                                 Now that we have a client ID and an access token we are ready to start using the API. The final parameter we will pass to the API is a search query. We will use a text box tied to a scope variable, along with a button that fires off a Javascript function -
-
                             p
                                 pre.prettyprint.
                                     &lt;div class="input-group"&gt;
@@ -186,7 +185,7 @@ block content
                                         $scope.tags = json.data.data.slice(0,5);
                                     });
                             p.
-                                We can then reference the "tags" variable in our HTML - here we are creating a table, looping through each object in the tags array and creating a row that displays the tag name and media count. Again we can use a bit of Angular to hide this table until we actually have tag data to display -
+                                We can then reference the "tags" variable in our HTML - here we are creating a table, looping through each object in the tags array and creating a row that displays the tag name and media count. Again we can use a bit of Angular to hide this table until we have tag data to display -
                             p
                                 pre.prettyprint(ng-non-bindable).
                                     &lt;table ng-show="tags" class="table table-condensed table-hover"&gt;

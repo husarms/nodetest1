@@ -26,60 +26,111 @@ block content
                 div.row
                     div.col-md-10.col-md-offset-1
                         div(ng-app="myApp" ng-controller="myCtrl")
+                            img.img-responsive.margin-bottom-20(src='/images/blog/instagram-api/instagram-title.png',alt='')
                             h2.Title=title
                                 small &nbsp;
                             ul.list-inline.posted-info
                                 li Matt Husar
-                                li March 3, 2016
+                                li April 29, 2016
                             hr
-                            //-Code snippet with pretty print
                             p.
                                 For this post I wanted to work through a basic example of requesting data from an external API and displaying it on a page. We will be using the Instagram API as our data source, making requests via http, getting JSON data back and using a bit of Angular to display it.
                             p.
-                                The end result allows the user to search for an Instagram tag and get a listing of matching tags along with their media count -
-
-                            //-Step 1 - Direct your user to our authorization URL
-                            div(ng-show="accessToken == null")
-                                p
-                                    div.input-group
-                                        span.input-group-btn
-                                            a.btn-u.btn-brd-hover(type="button" href='https://api.instagram.com/oauth/authorize/?client_id=2aaa8ce013bc4a1291054e1ff79481f4&redirect_uri=http://localhost:3000/blog/posts/instagram-api&response_type=token') Get Access Token
-                            //-Step 2 - Request Data
-                            div(ng-show="accessToken != null")
-                                p.
-                                    <i class="fa fa-check-square-o"></i> Access granted - token = {{accessToken}}
-                                p
-                                    div.input-group
-                                        span.input-group-btn
-                                            button.btn-u.btn-brd-hover(type="button",ng-click='getTagData()') <i class="fa fa-search"></i> Search Tags
-                                        input.form-control(type="text", placeholder="Enter a tag name", ng-model="searchQuery")
-                                div.alert.alert-warning(ng-hide="message == null")
-                                    a.close(ng-click="message = null", aria-label="close") &times;
-                                    p {{message}}
-                                table.table.table-condensed.table-hover(ng-show="tags")
-                                    thead
-                                        td Tag Name
-                                        td Media Count
-                                    tr(ng-repeat="tag in tags")
-                                        td {{tag.name}}
-                                        td {{tag.media_count}}
+                                The end result allows the user to search for tags, then get a listing of matching tags along with their media count -
+                            div.one-page-inner.bg-light
+                                h3 Instagram API Demo - Search tags
+                                hr
+                                //-Step 1 - Direct your user to our authorization URL
+                                div(ng-show="accessToken == null")
+                                    p
+                                        a.btn-u.btn-brd-hover(type="button" href='https://api.instagram.com/oauth/authorize/?client_id=2aaa8ce013bc4a1291054e1ff79481f4&redirect_uri={{baseUrl}}&response_type=token') Click Here for Access Token
+                                //-Step 2 - Request Data
+                                div(ng-show="accessToken != null")
+                                    p.
+                                        <i class="fa fa-check-square-o"></i> Access granted - token = {{accessToken}}
+                                    p
+                                        div.input-group
+                                            span.input-group-btn
+                                                button.btn-u.btn-brd-hover(type="button",ng-click='getTagData()') <i class="fa fa-search"></i> Search Tags
+                                            input.form-control(type="text", placeholder="Enter a tag name", ng-model="searchQuery")
+                                    div.alert.alert-warning(ng-hide="message == null")
+                                        a.close(ng-click="message = null", aria-label="close") &times;
+                                        p {{message}}
+                                    table.table.table-condensed.table-hover(ng-show="tags")
+                                        thead
+                                            td Tag Name
+                                            td Media Count
+                                        tr(ng-repeat="tag in tags")
+                                            td {{tag.name}}
+                                            td {{tag.media_count}}
                             br
-                            h3.
-                                Getting access to the Instagram API
+                            h3 Registering your application
                             p.
-                                Way back when, certain parts of the Instagram API were accessible without authentication. This made it popular with developers who wanted an easy way to play around with a REST API. It is much more locked down these days, and requires a bit of setup work before you can start making requests.
+                                Way back when, certain parts of the Instagram API were accessible without authentication. This made it popular with developers who wanted an easy way to play around with a REST API. These days it is more locked down, and requires a bit of setup work before we can start making requests.
                             p.
-                                First you will need to 'register' your application with Instagram. Once it has been 'approved' it will be assigned a client id. Check out the <a href="https://www.instagram.com/developer/">Instagram developer page</a> for more information.
+                                First you will need to 'register' your application with Instagram. Once it has been 'approved' it will be assigned a client id. This client id will then be included in each request you make to the API. Check out the <a href="https://www.instagram.com/developer/">Instagram developer page</a> for more information.
+                            br
+                            h3 Obtaining an access token
                             p.
-                                This client id will then be included in each request you make to the API -
+                                The next item we need before we can issue requests is an access token. To obtain this we will use a link that redirects to an Instagram -
                             p
                                 pre.prettyprint.
-                                    &lt;a href="https://api.instagram.com/oauth/authorize/?client_id=2aaa8ce013bc4a1291054e1ff79481f4&amp;redirect_uri=http://localhost:3000/blog/posts/instagram-api&amp;response_type=token&amp;scope=public_content"&gt;
-                                        Instagram Authorization Link
+                                    &lt;a type="button" href="https://api.instagram.com/oauth/authorize/?client_id=2aaa8ce013bc4a1291054e1ff79481f4&amp;redirect_uri=http://www.matthusar.com/blog/posts/instagram-api&amp;response_type=token" class="btn-u btn-brd-hover">
+                                        Click Here for Access Token
                                     &lt;/a&gt;
-
+                            p.
+                                Clicking this link will bring the user to an Instagram login screen -
+                            img.img-responsive.margin-bottom-20(src='/images/blog/instagram-api/instagram-login.png',alt='')
+                            p.
+                                Once the user has successfully logged in, they will be redirected back to our page with a token. Our URL will change from this -
+                            p
+                                pre.prettyprint.
+                                    matthusar.com/blog/posts/instagram-api
+                            p.
+                                To this -
+                            p
+                                pre.prettyprint.
+                                    matthusar.com/blog/posts/instagram-api#access_token=375282163.2aaa8ce.089966e9775148d8b2652d214106e2a4
+                            p.
+                                We will want to take the value of this token and assign it to a variable so we can use it elsewhere. Since we are using Angular we can check the URL for an access token in the app controller, then assign it to a scope variable.
+                            p
+                                pre.prettyprint.
+                                    app.controller('myCtrl', function($scope, $http) {
+                                        //Get token from URL
+                                        var urlToken = location.hash.split("access_token=")[1];
+                                        if(urlToken !== null){
+                                            $scope.accessToken = urlToken;
+                                        }
+                                    ...
+                            p.
+                                Now that we have the token value assigned to a scope variable, we can enhance things a bit by only showing the access token link when we actually NEED a token -
+                            p
+                                pre.prettyprint.
+                                    &lt;div ng-show="accessToken == null"&gt;
+                                        &lt;p&gt;
+                                            &lt;a type="button" href="https://api.instagram.com/oauth/authorize/?client_id=2aaa8ce013bc4a1291054e1ff79481f4&amp;redirect_uri=http://www.matthusar.com/blog/posts/instagram-api&amp;response_type=token" class="btn-u btn-brd-hover"&gt;
+                                                Get Access Token
+                                            &lt;/a&gt;
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+                            br
                             h3 Issuing a request
-                            p Javascript
+                            p.
+                                Now that we have a client ID and an access token we are ready to start using the API. The final parameter we will pass to the API is a search query. We will use a text box tied to a scope variable, along with a button that fires off a Javascript function -
+
+                            p
+                                pre.prettyprint.
+                                    &lt;div class="input-group"&gt;
+                                        &lt;span class="input-group-btn"&gt;
+                                            &lt;button type="button" ng-click="getTagData()" class="btn-u btn-brd-hover"&gt;
+                                                &lt;i class="fa fa-search"&gt;&lt;/i&gt; Search Tags
+                                            &lt;/button&gt;
+                                        &lt;/span&gt;
+                                        &lt;input type="text" placeholder="Enter a tag name" ng-model="searchQuery" class="form-control"&gt;
+                                    &lt;/div&gt;
+                            p.
+                                The Javascript function will verify the user has entered a search query, then make an HTTP request to the Instagram API. We will pass our client ID, access token and query as parameters -
+                            p
                                 pre.prettyprint.
                                     //Search for tag data
                                     $scope.getTagData = function(){
@@ -99,14 +150,44 @@ block content
                                                         $scope.tags = json.data.data.slice(0,5);
                                                     });
                                         }
+                            br
                             h3 Displaying the response
-                            p Javascript
+                            p.
+                                If our request is successful, we should get a JSON response back from Instagram with an array of objects that match our search query -
+                            p
+                                pre.prettyprint.
+                                    {
+                                       "meta":{
+                                          "code":200
+                                       },
+                                       "data":[
+                                          {
+                                             "media_count":255815543,
+                                             "name":"tagsforlikes"
+                                          },
+                                          {
+                                             "media_count":8235370,
+                                             "name":"tag"
+                                          },
+                                          {
+                                             "media_count":4655343,
+                                             "name":"tagstagramers"
+                                          },
+                                          {
+                                             "media_count":2475242,
+                                             "name":"tagsforfollow"
+                                          },...
+                            p.
+                                To display the data, we will assign the object array to another scope variable called "tags". We can do this by chaining another function after the request using Angular's .then() function. For the sake of simplicity we are slicing down the array to just the first 5 objects -
+                            p
                                 pre.prettyprint.
                                     .then(function(json){
                                         //Get first 5 response results
                                         $scope.tags = json.data.data.slice(0,5);
                                     });
-                            p HTML
+                            p.
+                                We can then reference the "tags" variable in our HTML - here we are creating a table, looping through each object in the tags array and creating a row that displays the tag name and media count -
+                            p
                                 pre.prettyprint(ng-non-bindable).
                                     &lt;table ng-show="tags" class="table table-condensed table-hover"&gt;
                                         &lt;thead&gt;
@@ -118,6 +199,10 @@ block content
                                             &lt;td&gt;{{tag.media_count}}&lt;/td&gt;
                                         &lt;/tr&gt;
                                     &lt;/table&gt;
+                            p.
+                                That's it. Admittedly this was a super basic example, but now we have the flow down for authenticating, requesting data and displaying the response from Instagram's API. Check out their <a href="https://www.instagram.com/developer/">documentation</a> to get some ideas of what else you could implement.
+                            p.
+                                Obviously Instagram is all about pictures and videos - so look out for a future post on retrieving media content.
 
     //-JS Implementing Plugins
     script(type='text/javascript',src='/plugins/prettify.js')
@@ -125,6 +210,7 @@ block content
     script(type='text/javascript').
         var app = angular.module('myApp', []);
         app.controller('myCtrl', function($scope, $http) {
+            $scope.baseUrl = location.origin + location.pathname;
             //Get token from URL
             var urlToken = location.hash.split("access_token=")[1];
             if(urlToken !== null){

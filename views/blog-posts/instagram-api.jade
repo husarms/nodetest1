@@ -66,13 +66,13 @@ block content
                             br
                             h3 Registering your application
                             p.
-                                Way back when, certain parts of the Instagram API were accessible without authentication. This made it popular with developers who wanted an easy way to play around with a REST API. These days it is more locked down, and requires a bit of setup work before we can start making requests.
+                                Way back when, certain parts of the Instagram API were accessible without authentication. This made it popular with developers who wanted an easy way to play around with a REST API. Nowadays it is more locked down and requires a bit of setup work before we can start making requests.
                             p.
                                 First you will need to 'register' your application with Instagram. Once it has been 'approved' it will be assigned a client id. This client id will then be included in each request you make to the API. Check out the <a href="https://www.instagram.com/developer/">Instagram developer page</a> for more information.
                             br
                             h3 Obtaining an access token
                             p.
-                                The next item we need before we can issue requests is an access token. To obtain this we will use a link that redirects to an Instagram -
+                                Once we have our client ID, the next item we need is an access token. This will be issued to each user by prompting them to login to their Instagram account. We do this through a link to Instagram which will redirect back to our page with a token after the user logs in -
                             p
                                 pre.prettyprint.
                                     &lt;a type="button" href="https://api.instagram.com/oauth/authorize/?client_id=2aaa8ce013bc4a1291054e1ff79481f4&amp;redirect_uri=http://www.matthusar.com/blog/posts/instagram-api&amp;response_type=token" class="btn-u btn-brd-hover">
@@ -92,7 +92,7 @@ block content
                                 pre.prettyprint.
                                     matthusar.com/blog/posts/instagram-api#access_token=375282163.2aaa8ce.089966e9775148d8b2652d214106e2a4
                             p.
-                                We will want to take the value of this token and assign it to a variable so we can use it elsewhere. Since we are using Angular we can check the URL for an access token in the app controller, then assign it to a scope variable.
+                                We will want to take the value of this token and assign it to a variable so we can use it elsewhere. Since we are using Angular we can check the URL for an access token in the app controller, then assign it to a scope variable. This will check for a token every time the page loads -
                             p
                                 pre.prettyprint.
                                     app.controller('myCtrl', function($scope, $http) {
@@ -186,7 +186,7 @@ block content
                                         $scope.tags = json.data.data.slice(0,5);
                                     });
                             p.
-                                We can then reference the "tags" variable in our HTML - here we are creating a table, looping through each object in the tags array and creating a row that displays the tag name and media count -
+                                We can then reference the "tags" variable in our HTML - here we are creating a table, looping through each object in the tags array and creating a row that displays the tag name and media count. Again we can use a bit of Angular to hide this table until we actually have tag data to display -
                             p
                                 pre.prettyprint(ng-non-bindable).
                                     &lt;table ng-show="tags" class="table table-condensed table-hover"&gt;

@@ -26,60 +26,193 @@ block content
                 div.row
                     div.col-md-10.col-md-offset-1
                         div(ng-app="myApp" ng-controller="myCtrl")
-                            //-img.img-responsive.margin-bottom-20(src='/images/blog/instagram-api/instagram-title.png',alt='')
                             h2.Title=title
                             small &nbsp;
                             ul.list-inline.posted-info
                                 li Matt Husar
-                                li April 29, 2016
+                                li May 2, 2016
                             hr
+                            p.
+                                In our <a href='/blog/posts/instagram-api'> previous post </a> we walked through how to get access to the Instagram API and query tag data. Now for the fun stuff - we want to retrieve media data and display it on our page.
+                            p.
+                                The end result allows the user to search for tags, then get recently uploaded images for each one -
+
                             div.one-page-inner.bg-light
                                 h3 Instagram API Demo - Get Recent Media
                                 hr
-                                //-Step 1 - Direct your user to our authorization URL
-                                div(ng-show="accessToken == null")
-                                    p
-                                        a.btn-u.btn-brd-hover(type="button" href='https://api.instagram.com/oauth/authorize/?client_id=2aaa8ce013bc4a1291054e1ff79481f4&redirect_uri={{baseUrl}}&response_type=token') Click Here for Access Token
-                                //-Step 2 - Request Data
-                                div(ng-show="accessToken != null")
-                                    p.
-                                        <i class="fa fa-check-square-o"></i> Access granted - token = {{accessToken}}
-                                    p
-                                        div.input-group
-                                            span.input-group-btn
-                                                button.btn-u.btn-brd-hover(type="button",ng-click='getTagData()') <i class="fa fa-search"></i> Search Tags
-                                            input.form-control(type="text", placeholder="Enter a tag name", ng-model="searchQuery", maxlength="30")
-                                    div.alert.alert-warning(ng-hide="message == null")
-                                        a.close(ng-click="message = null", aria-label="close") &times;
-                                        p {{message}}
-                                    table.table.table-condensed.table-hover(ng-show="tags")
-                                        thead
-                                            td Tag Name
-                                            td Media Count
-                                            td Recent Media
-                                        tr(ng-repeat="tag in tags")
-                                            td {{tag.name}}
-                                            td {{tag.media_count}}
-                                            td
-                                                a(type='button', ng-click='getRecentMedia(tag.name)') Get recent media for '{{tag.name}}'
-                                    div(ng-show="media")
-                                        p Recent Media
-                                        p(ng-repeat="item in media")
-                                            img(src='{{item.images.standard_resolution.url}}', alt='instagram-image')
+                                //-Step 1 - Search tags
+                                p
+                                    div.input-group
+                                        span.input-group-btn
+                                            button.btn-u.btn-brd-hover(type="button",ng-click='getTagData()') <i class="fa fa-search"></i> Search Tags
+                                        input.form-control(type="text", placeholder="Enter a tag name", ng-model="searchQuery", maxlength="30")
+                                div.alert.alert-warning(ng-hide="message == null")
+                                    a.close(ng-click="message = null", aria-label="close") &times;
+                                    p {{message}}
+                                table.table.table-condensed.table-hover(ng-show="tags")
+                                    thead
+                                        td Tag Name
+                                        td Media Count
+                                        td Recent Media
+                                    tr(ng-repeat="tag in tags")
+                                        td {{tag.name}}
+                                        td {{tag.media_count}}
+                                        td
+                                            a(href='', ng-click='getRecentMedia(tag.name)') Get recent media for '{{tag.name}}'
+                                //-Step 2 - Get recent media for tag
+                                div.owl-carousel-v1.owl-work-v1.margin-bottom-20(ng-show="media")
+                                    div.headline
+                                        h2.pull-left Recent Media for \#{{searchTag}}
+                                        div.owl-navigation
+                                            a.owl-btn.prev-v2
+                                                i.fa.fa-angle-left
+                                            a.owl-btn.next-v2
+                                                i.fa.fa-angle-right
+                                    div.owl-recent-works-v1
+                                        div.item(ng-repeat="item in media")
+                                            a(href='')
+                                                em.overflow-hidden
+                                                img.img-responsive(src='{{item.images.thumbnail.url}}', alt='')
+                            br
+                            p.
+                                The first piece - searching for tags - should look familiar. If not, please check out the <a href='/blog/posts/instagram-api'> previous post </a> on the Instagram API. We are going to added a 3rd column to our search results with a link that will retrieve recent media for our tag -
+                            p
+                                pre.prettyprint.
+                                    &lt;table ng-show="tags" class="table table-condensed table-hover"&gt;
+                                        &lt;thead&gt;
+                                            &lt;td&gt;Tag Name&lt;/td&gt;
+                                            &lt;td&gt;Media Count&lt;/td&gt;
+                                            &lt;td&gt;Recent Media&lt;/td&gt;
+                                        &lt;/thead&gt;
+                                        &lt;tr ng-repeat="tag in tags"&gt;
+                                            &lt;td&gt;{{tag.name}}&lt;/td&gt;
+                                            &lt;td&gt;{{tag.media_count}}&lt;/td&gt;
+                                            &lt;td&gt;
+                                                &lt;a href="" ng-click="getRecentMedia(tag.name)"&gt;Get recent media for '{{tag.name}}'&lt;/a&gt;
+                                            &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                    &lt;/table&gt;
+
+                            P.
+                                Clicking the link will call a Javascript function, passing the tag name as a parameter. This function will be extremely similar to the first function we created for retrieving tag data.
+                            p.
+                                We will take the tag name and make another HTTP request to the Instagram API - this time to the "recent media" endpoint. Again we need to pass our access token as part of the request -
+                            p
+                                pre.prettyprint.
+                                    //Get recent media with tag
+                                    $scope.getRecentMedia = function(tag){
+                                        $scope.searchTag = tag;
+                                        $http.jsonp('https://api.instagram.com/v1/tags/' + tag + '/media/recent?' +
+                                            'access_token=' + $scope.accessToken +
+                                            '&callback=JSON_CALLBACK')
+                                        ...
+                            p.
+                                Again we will chain a function after the request to handle the JSON response. We are assigning the response - an array of "media" objects - to a scope variable.
+                            p
+                                pre.prettyprint.
+                                        ...
+                                        .then(function (json) {
+                                            //Get first 7 response results
+                                            if(json.data.data !== undefined){
+                                                $scope.media = json.data.data.slice(0, 7);
+                                            ...
+                                        });
+                            p.
+
+                                Displaying the media data is also similar - we will loop each object in our media array and output an image. Each media object contains URLs for several different images sizes. In this example we are just using thumbnails -
+                            p
+                                pre.prettyprint(ng-non-bindable).
+                                    &lt;div ng-show="media"&gt;
+                                        &lt;p&gt;
+                                            &lt;img class='img-responsive', src = '{{item.images.thumbnail.url}}', alt='' /&gt;
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+                            p.
+                                To step things up a bit, we are displaying our images with <a href="http://www.owlcarousel.owlgraphic.com/">Owl Carousel</a> - a jQuery plugin for creating "carousel" sliders. Not really necessary for learning to work with an API - but here is how we are using it in HTML -
+                            p
+                                pre.prettyprint(ng-non-bindable).
+                                    &lt;div ng-show="media" class="owl-carousel-v1 owl-work-v1 margin-bottom-20"&gt;
+                                        &lt;div class="headline"&gt;
+                                            &lt;h2 class="pull-left">Recent Media for \\#{{searchTag}}&lt;/h2&gt;
+                                            &lt;div class="owl-navigation"&gt;
+                                                &lt;a class="owl-btn prev-v2"&gt;
+                                                    &lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;
+                                                &lt;/a&gt;
+                                                &lt;a class="owl-btn next-v2"&gt;
+                                                    &lt;i class="fa fa-angle-right">&lt;/i&gt;
+                                                &lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="owl-recent-works-v1"&gt;
+                                            &lt;div ng-repeat="item in media" class="item"&gt;
+                                                &lt;a href=""&gt;
+                                                    &lt;em class="overflow-hidden"&gt;&lt;/em&gt;
+                                                    &lt;img src="{{item.images.thumbnail.url}}" alt="" class="img-responsive"&gt;
+                                                &lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                            p.
+                                We then call a function to initialize the carousel each time we load response data from the API -
+                            p
+                                pre.prettyprint.
+                                    ...
+                                    .then(function (json) {
+                                        //Get first 7 response results
+                                        if(json.data.data !== undefined){
+                                            $scope.media = json.data.data.slice(0, 7);
+                                            $timeout(function () {
+                                            //Initialize owl carousel after media has been loaded
+                                            $scope.initOwlCarousel();
+                                        });
+                                    }
+                            p.
+                                This function checks for any existing instances and destroys them before re-initializing so we can reload the carousel with data each time the user selects a new tag. There are many initialization parameters we can pass in to configure the carousel - such as how many items to display at once or the slide speed. Finally, we setup the navigation events for the 'next' and 'prev' arrows -
+                            p
+                                pre.prettyprint.
+                                    //Initialize Owl Carousel for images
+                                    $scope.initOwlCarousel = function(){
+                                        jQuery(document).ready(function () {
+                                            //Get owl element
+                                            var owl = jQuery('.owl-recent-works-v1');
+                                            //Get owl instance from element
+                                            var owlInstance = owl.data('owlCarousel');
+                                            //If instance is existing - reinit with new images
+                                            if(owlInstance != null){
+                                                owlInstance.reinit();
+                                                return;
+                                            }
+                                            //Initializer the owl carousel
+                                            owl.owlCarousel({
+                                                items: [4],
+                                                itemsDesktop : [1000,4],
+                                                itemsDesktopSmall : [900,3],
+                                                itemsTablet: [600,2],
+                                                itemsMobile : [479,1],
+                                                slideSpeed: 1000
+                                            });
+                                            // Custom Navigation Events
+                                            jQuery(".next-v2").click(function () {
+                                                owl.trigger('owl.next');
+                                            })
+                                            jQuery(".prev-v2").click(function () {
+                                                owl.trigger('owl.prev');
+                                            })
+                                        });
+                                    }
+                            p.
+                                Now we've created a basic, but useful application - an interface that allows users to search for and retrieve content that interests them. 
+
 
 
     //-JS Implementing Plugins
-    script(type='text/javascript',src='/plugins/prettify.js')
+    script(type='text/javascript', src='/plugins/prettify.js')
     //-JS Page Level
+    script(type='text/javascript', src='/plugins/owl-carousel/owl-carousel/owl.carousel.min.js')
     script(type='text/javascript').
         var app = angular.module('myApp', []);
-        app.controller('myCtrl', function($scope, $http) {
-            $scope.baseUrl = location.origin + location.pathname;
-            //Get token from URL
-            var urlToken = location.hash.split("access_token=")[1];
-            if(urlToken !== null){
-                $scope.accessToken = urlToken;
-            }
+        app.controller('myCtrl', function($scope, $http, $timeout) {
+            $scope.accessToken = '375282163.1677ed0.0592e3a5d55948daa7afef4623e29e03';
             //Search for tag data
             $scope.getTagData = function(){
                 $scope.message = null;
@@ -93,30 +226,65 @@ block content
                                     'q=' + $scope.searchQuery +
                                     '&access_token=' + $scope.accessToken +
                                     '&callback=JSON_CALLBACK')
-                        .then(function(json){
-                            //Get first 5 response results
-                            if(json.data.data !== undefined){
-                                $scope.tags = json.data.data.slice(0, 5);
-                            }
-                            if (json.data.meta.error_message !== undefined) {
-                                $scope.message = json.data.meta.error_message;
-                            }
-                        });
+                    .then(function(json){
+                        //Get first 5 response results
+                        if(json.data.data !== undefined){
+                            $scope.tags = json.data.data.slice(0, 5);
+                        }
+                        if (json.data.meta.error_message !== undefined) {
+                            $scope.message = json.data.meta.error_message;
+                        }
+                    });
                 }
             }
             //Get recent media with tag
             $scope.getRecentMedia = function(tag){
+                $scope.searchTag = tag;
                 $http.jsonp('https://api.instagram.com/v1/tags/' + tag + '/media/recent?' +
-                        'access_token=375282163.1677ed0.0592e3a5d55948daa7afef4623e29e03' +
+                        'access_token=' + $scope.accessToken +
                         '&callback=JSON_CALLBACK')
                     .then(function (json) {
-                        //Get first 5 response results
+                        //Get first 7 response results
                         if(json.data.data !== undefined){
-                            $scope.media = json.data.data.slice(0, 5);
+                            $scope.media = json.data.data.slice(0, 7);
+                            $timeout(function () {
+                                //Initialize owl carousel after media has been loaded
+                                $scope.initOwlCarousel();
+                            });
                         }
                         if(json.data.meta.error_message !== undefined){
                             $scope.message = json.data.meta.error_message;
                         }
                     });
+            }
+            //Initialize Owl Carousel for images
+            $scope.initOwlCarousel = function(){
+                jQuery(document).ready(function () {
+                    //Get owl element
+                    var owl = jQuery('.owl-recent-works-v1');
+                    //Get owl instance from element
+                    var owlInstance = owl.data('owlCarousel');
+                    //If instance is existing - reinit with new images
+                    if(owlInstance != null){
+                        owlInstance.reinit();
+                        return;
+                    }
+                    //Initializer the owl carousel
+                    owl.owlCarousel({
+                        items: [4],
+                        itemsDesktop : [1000,4],
+                        itemsDesktopSmall : [900,3],
+                        itemsTablet: [600,2],
+                        itemsMobile : [479,1],
+                        slideSpeed: 1000
+                    });
+                    // Custom Navigation Events
+                    jQuery(".next-v2").click(function () {
+                        owl.trigger('owl.next');
+                    })
+                    jQuery(".prev-v2").click(function () {
+                        owl.trigger('owl.prev');
+                    })
+                });
             }
         });

@@ -33,7 +33,7 @@ block content
                                 li May 2, 2016
                             hr
                             p.
-                                In our <a href='/blog/posts/instagram-api'> previous post </a> we walked through how to get access to the Instagram API and query tag data. Now for the fun stuff - we want to retrieve media data and display it on our page.
+                                In our <a href='/blog/posts/instagram-api-1'> previous post </a> we walked through how to get access to the Instagram API and query tag data. Now for the fun stuff - we want to retrieve media data and display it on our page.
                             p.
                                 The end result allows the user to search for tags, then get recently uploaded images for each one -
 
@@ -60,22 +60,15 @@ block content
                                         td
                                             a(href='', ng-click='getRecentMedia(tag.name)') Get recent media for '{{tag.name}}'
                                 //-Step 2 - Get recent media for tag
-                                div.owl-carousel-v1.owl-work-v1.margin-bottom-20(ng-show="media")
+                                div(ng-show="media")
                                     div.headline
-                                        h2.pull-left Recent Media for \#{{searchTag}}
-                                        div.owl-navigation
-                                            a.owl-btn.prev-v2
-                                                i.fa.fa-angle-left
-                                            a.owl-btn.next-v2
-                                                i.fa.fa-angle-right
-                                    div.owl-recent-works-v1
-                                        div.item(ng-repeat="item in media")
-                                            a(href='')
-                                                em.overflow-hidden
-                                                img.img-responsive(src='{{item.images.thumbnail.url}}', alt='')
+                                        h3 Recent Media for \#{{searchTag}}
+                                    p
+                                        img(ng-repeat="item in media", src='{{item.images.thumbnail.url}}', alt='')
+
                             br
                             p.
-                                The first piece - searching for tags - should look familiar. If not, please check out the <a href='/blog/posts/instagram-api'> previous post </a> on the Instagram API. We are going to added a 3rd column to our search results with a link that will retrieve recent media for our tag -
+                                The first piece - searching for tags - should look familiar. If not, please check out the <a href='/blog/posts/instagram-api-1'> previous post </a> on the Instagram API. We are going to added a 3rd column to our search results with a link that will retrieve recent media for our tag -
                             p
                                 pre.prettyprint.
                                     &lt;table ng-show="tags" class="table table-condensed table-hover"&gt;
@@ -107,111 +100,95 @@ block content
                                             '&callback=JSON_CALLBACK')
                                         ...
                             p.
-                                Again we will chain a function after the request to handle the JSON response. We are assigning the response - an array of "media" objects - to a scope variable.
-                            p
-                                pre.prettyprint.
-                                        ...
-                                        .then(function (json) {
-                                            //Get first 7 response results
-                                            if(json.data.data !== undefined){
-                                                $scope.media = json.data.data.slice(0, 7);
-                                            ...
-                                        });
-                            p.
-
-                                Displaying the media data is also similar - we will loop each object in our media array and output an image. Each media object contains URLs for several different images sizes. In this example we are just using thumbnails -
-                            p
-                                pre.prettyprint(ng-non-bindable).
-                                    &lt;div ng-show="media"&gt;
-                                        &lt;p&gt;
-                                            &lt;img class='img-responsive', src = '{{item.images.thumbnail.url}}', alt='' /&gt;
-                                        &lt;/p&gt;
-                                    &lt;/div&gt;
-                            p.
-                                To step things up a bit, we are displaying our images with <a href="http://www.owlcarousel.owlgraphic.com/">Owl Carousel</a> - a jQuery plugin for creating "carousel" sliders. Not really necessary for learning to work with an API - but here is how we are using it in HTML -
-                            p
-                                pre.prettyprint(ng-non-bindable).
-                                    &lt;div ng-show="media" class="owl-carousel-v1 owl-work-v1 margin-bottom-20"&gt;
-                                        &lt;div class="headline"&gt;
-                                            &lt;h2 class="pull-left">Recent Media for \\#{{searchTag}}&lt;/h2&gt;
-                                            &lt;div class="owl-navigation"&gt;
-                                                &lt;a class="owl-btn prev-v2"&gt;
-                                                    &lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;
-                                                &lt;/a&gt;
-                                                &lt;a class="owl-btn next-v2"&gt;
-                                                    &lt;i class="fa fa-angle-right">&lt;/i&gt;
-                                                &lt;/a&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                        &lt;div class="owl-recent-works-v1"&gt;
-                                            &lt;div ng-repeat="item in media" class="item"&gt;
-                                                &lt;a href=""&gt;
-                                                    &lt;em class="overflow-hidden"&gt;&lt;/em&gt;
-                                                    &lt;img src="{{item.images.thumbnail.url}}" alt="" class="img-responsive"&gt;
-                                                &lt;/a&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                    &lt;/div&gt;
-                            p.
-                                We then call a function to initialize the carousel each time we load response data from the API -
+                                We will again chain a function after the request to handle the JSON response. We are assigning the response - an array of "media" objects - to a scope variable. We are also limiting what we display to the first 4 objects -
                             p
                                 pre.prettyprint.
                                     ...
                                     .then(function (json) {
                                         //Get first 7 response results
                                         if(json.data.data !== undefined){
-                                            $scope.media = json.data.data.slice(0, 7);
-                                            $timeout(function () {
-                                            //Initialize owl carousel after media has been loaded
-                                            $scope.initOwlCarousel();
-                                        });
-                                    }
+                                            $scope.media = json.data.data.slice(0, 4);
+                                    });
                             p.
-                                This function checks for any existing instances and destroys them before re-initializing so we can reload the carousel with data each time the user selects a new tag. There are many initialization parameters we can pass in to configure the carousel - such as how many items to display at once or the slide speed. Finally, we setup the navigation events for the 'next' and 'prev' arrows -
+                                The media object is fairly complex and contains all sorts of data. Here is just a snippet -
                             p
                                 pre.prettyprint.
-                                    //Initialize Owl Carousel for images
-                                    $scope.initOwlCarousel = function(){
-                                        jQuery(document).ready(function () {
-                                            //Get owl element
-                                            var owl = jQuery('.owl-recent-works-v1');
-                                            //Get owl instance from element
-                                            var owlInstance = owl.data('owlCarousel');
-                                            //If instance is existing - reinit with new images
-                                            if(owlInstance != null){
-                                                owlInstance.reinit();
-                                                return;
-                                            }
-                                            //Initializer the owl carousel
-                                            owl.owlCarousel({
-                                                items: [4],
-                                                itemsDesktop : [1000,4],
-                                                itemsDesktopSmall : [900,3],
-                                                itemsTablet: [600,2],
-                                                itemsMobile : [479,1],
-                                                slideSpeed: 1000
-                                            });
-                                            // Custom Navigation Events
-                                            jQuery(".next-v2").click(function () {
-                                                owl.trigger('owl.next');
-                                            })
-                                            jQuery(".prev-v2").click(function () {
-                                                owl.trigger('owl.prev');
-                                            })
-                                        });
-                                    }
+                                    "data":[
+                                            {
+                                               "attribution":null,
+                                               "tags":[
+                                                  "villaalemana",
+                                                  "belloto",
+                                                  "sushi",
+                                                  "pe\u00f1ablanca",
+                                                  "troncosviejos"
+                                               ],
+                                               "type":"image",
+                                               "location":{
+                                                  "latitude":-33.04753,
+                                                  "name":"Gomoku Sushi Delivery",
+                                                  "longitude":-71.36454,
+                                                  "id":1027180034
+                                               },
+                                               "comments":{
+                                                  "count":0,
+                                                  "data":[
+
+                                                  ]
+                                               },
+                                               "filter":"Normal",
+                                               "created_time":"1462302009",
+                                               "link":"https://www.instagram.com/p/BE9L-fnOZud/",
+                                               "likes":{
+                                                  "count":0,
+                                                  "data":[
+
+                                                  ]
+                                               },
+                                               "images":{
+                                                  "low_resolution":{
+                                                     "url":"https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13102589_547561472114298_449979105_n.jpg?ig_cache_key=MTI0MjIwMTc0NTI4NzM4ODA2MQ%3D%3D.2.l",
+                                                     "width":320,
+                                                     "height":320
+                                                  },
+                                                  "thumbnail":{
+                                                     "url":"https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/c108.0.252.252/13129978_1785215861709934_1250220322_n.jpg?ig_cache_key=MTI0MjIwMTc0NTI4NzM4ODA2MQ%3D%3D.2.c",
+                                                     "width":150,
+                                                     "height":150
+                                                  },
+                                                  "standard_resolution":{
+                                                     "url":"https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13102589_547561472114298_449979105_n.jpg?ig_cache_key=MTI0MjIwMTc0NTI4NzM4ODA2MQ%3D%3D.2.l",
+                                                     "width":320,
+                                                     "height":320
+                                                  }
+                                               },
+                                            ...
                             p.
-                                Now we've created a basic, but useful application - an interface that allows users to search for and retrieve content that interests them. 
-
-
+                                You'll notice we have image URLs with several different resolutions to choose from. We will use these to display the images on our page. Again we'll use Angular's 'ng-show' to hide this div until we have data and 'ng-repeat' to loop through the media objects and display them -
+                            p
+                                pre.prettyprint(ng-non-bindable).
+                                    &lt;div ng-show="media"&gt;
+                                        &lt;div class="headline"/&gt;
+                                           &lt;h3&gt;Recent Media for \#{{searchTag}}&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                        &lt;p&gt;
+                                            &lt;img class="img-responsive",
+                                            ng-repeat="item in media",
+                                            src = "{{item.images.thumbnail.url}}",
+                                            alt="" /&gt;
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+                            p.
+                                Now we've created a basic, but useful application - an interface that allows users to retrieve content based on their interests. This is the main focus of many web applications - and we have achieved it with just two basic API interactions.
+                            p.
+                                We can continue to refine this - look out for a future post on how we can enhance the user experience and functionality of this application with data we are already receiving back in our responses from Instagram.
 
     //-JS Implementing Plugins
     script(type='text/javascript', src='/plugins/prettify.js')
     //-JS Page Level
-    script(type='text/javascript', src='/plugins/owl-carousel/owl-carousel/owl.carousel.min.js')
     script(type='text/javascript').
         var app = angular.module('myApp', []);
-        app.controller('myCtrl', function($scope, $http, $timeout) {
+        app.controller('myCtrl', function($scope, $http) {
             $scope.accessToken = '375282163.1677ed0.0592e3a5d55948daa7afef4623e29e03';
             //Search for tag data
             $scope.getTagData = function(){
@@ -246,45 +223,11 @@ block content
                     .then(function (json) {
                         //Get first 7 response results
                         if(json.data.data !== undefined){
-                            $scope.media = json.data.data.slice(0, 7);
-                            $timeout(function () {
-                                //Initialize owl carousel after media has been loaded
-                                $scope.initOwlCarousel();
-                            });
+                            $scope.media = json.data.data.slice(0, 4);
                         }
                         if(json.data.meta.error_message !== undefined){
                             $scope.message = json.data.meta.error_message;
                         }
                     });
-            }
-            //Initialize Owl Carousel for images
-            $scope.initOwlCarousel = function(){
-                jQuery(document).ready(function () {
-                    //Get owl element
-                    var owl = jQuery('.owl-recent-works-v1');
-                    //Get owl instance from element
-                    var owlInstance = owl.data('owlCarousel');
-                    //If instance is existing - reinit with new images
-                    if(owlInstance != null){
-                        owlInstance.reinit();
-                        return;
-                    }
-                    //Initializer the owl carousel
-                    owl.owlCarousel({
-                        items: [4],
-                        itemsDesktop : [1000,4],
-                        itemsDesktopSmall : [900,3],
-                        itemsTablet: [600,2],
-                        itemsMobile : [479,1],
-                        slideSpeed: 1000
-                    });
-                    // Custom Navigation Events
-                    jQuery(".next-v2").click(function () {
-                        owl.trigger('owl.next');
-                    })
-                    jQuery(".prev-v2").click(function () {
-                        owl.trigger('owl.prev');
-                    })
-                });
             }
         });

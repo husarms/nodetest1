@@ -1,0 +1,266 @@
+extends ../layout
+
+block content
+    style(text='text/css').
+        pre.prettyprint {
+            border: 1px solid #ccc;
+            margin-bottom: 0;
+            padding: 9.5px;
+            white-space: pre-wrap;
+        }
+    div.breadcrumbs
+        div.container
+            a(href='/blog')
+                h1.pull-left Blog
+            ul.pull-right.breadcrumb
+                li
+                    a(href='/') Home
+                li
+                    a(href='/blog') Blog
+                li.active
+                    a(href='')=title
+    //-End Breadcrumbs
+    div.container.content-sm
+        div.news-v3.margin-bottom-60
+            div.news-v3-in.bg-color-darker.col-md-10.col-md-offset-1
+                div.row
+                    div.col-md-10.col-md-offset-1
+                        div(ng-app="myApp" ng-controller="myCtrl")
+                            h2.Title=title
+                            ul.list-inline.posted-info
+                                li Matt Husar
+                                li May 3, 2016
+                            hr
+                            p.
+                                <a href='/blog/posts/instagram-api-2'> Last time </a> we learned how to retrieve media data from the Instagram API and present it to our user. Now we will refine this presentation by allowing the user to swipe through thumbnails and see a full size version of each image -
+                            div.one-page-inner.bg-light
+                                h3 Instagram API Demo - Refining the User Experience
+                                hr
+                                //-Step 1 - Search tags
+                                p
+                                    div.input-group
+                                        span.input-group-btn
+                                            button.btn-u.btn-brd-hover(type="button",ng-click='getTagData()') <i class="fa fa-search"></i> Search Tags
+                                        input.form-control(type="text", placeholder="Enter a tag name", ng-model="searchQuery", maxlength="30")
+                                div.alert.alert-warning(ng-hide="message == null")
+                                    a.close(ng-click="message = null", aria-label="close") &times;
+                                    p {{message}}
+                                table.table.table-condensed.table-hover(ng-show="tags")
+                                    thead
+                                        td Tag Name
+                                        td Media Count
+                                        td Recent Media
+                                    tr(ng-repeat="tag in tags")
+                                        td {{tag.name}}
+                                        td {{tag.media_count}}
+                                        td
+                                            a(href='', ng-click='getRecentMedia(tag.name)') Get recent media for '{{tag.name}}'
+                                //-Step 2 - Get recent media for tag
+                                div.owl-carousel-v1.owl-work-v1.margin-bottom-20(ng-show="media")
+                                    div.headline
+                                        h2.pull-left Recent Media for \#{{searchTag}}
+                                        div.owl-navigation
+                                            a.owl-btn.prev-v2
+                                                i.fa.fa-angle-left
+                                            a.owl-btn.next-v2
+                                                i.fa.fa-angle-right
+                                    div.owl-recent-works-v1
+                                        div.item(ng-repeat="item in media")
+                                            a.fancybox.img-hover-v1(href='{{item.images.standard_resolution.url}}', rel='gallery1', title='{{item.caption.text}}')
+                                                span
+                                                    img.img-responsive(src='{{item.images.standard_resolution.url}}', alt='')
+                            br
+                            p.
+                                To achieve this we are using two different jQuery plugins -
+                            table.table.table-condensed
+                                thead
+                                    td Plugin
+                                    td Functionality
+                                tr
+                                    td <a href="http://www.owlcarousel.owlgraphic.com/" target="_blank">Owl Carousel</a>
+                                    td Creates a "carousel" slider for our images
+                                tr
+                                    td <a href="http://fancyapps.com/fancybox/" target="_blank">fancyBox</a>
+                                    td Adds zooming functionality and a lightbox effect
+                            p.
+                                To create the structure for the carousel slider we will replace the following div of thumbnail images from the previous post...
+                            p
+                                pre.prettyprint(ng-non-bindable).
+                                    &lt;div ng-show="media"&gt;
+                                        &lt;div class="headline"/&gt;
+                                           &lt;h3&gt;Recent Media for \#{{searchTag}}&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                        &lt;p&gt;
+                                            &lt;img class="img-responsive",
+                                            ng-repeat="item in media",
+                                            src = "{{item.images.thumbnail.url}}",
+                                            alt="" /&gt;
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+                            p.
+                                ...with this HTML, which references the thumbnail and standard resolution image URLs, along with captions for each media object. It also includes navigation buttons which we will wire up later on -
+                            p
+                                pre.prettyprint(ng-non-bindable).
+                                    &lt;div ng-show="media" class="owl-carousel-v1 owl-work-v1 margin-bottom-20"&gt;
+                                        &lt;div class="headline"&gt;
+                                            &lt;h2 class="pull-left">Recent Media for \\#{{searchTag}}&lt;/h2&gt;
+                                            &lt;div class="owl-navigation"&gt;
+                                                &lt;a class="owl-btn prev-v2"&gt;
+                                                    &lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;
+                                                &lt;/a&gt;
+                                                &lt;a class="owl-btn next-v2"&gt;
+                                                    &lt;i class="fa fa-angle-right">&lt;/i&gt;
+                                                &lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="owl-recent-works-v1"&gt;
+                                            &lt;div ng-repeat="item in media" class="item"&gt;
+                                                &lt;a href="{{item.images.standard_resolution.url}}" rel="gallery1" title="{{item.caption.text}}" class="fancybox img-hover-v1"&gt;
+                                                    &lt;span&gt;
+                                                        &lt;img src="{{item.images.thumbnail.url}}" alt="" class="img-responsive"&gt;
+                                                    &lt;/span&gt;
+                                                &lt;/a&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                            p.
+                                Most jQuery plugins require you to 'initialize' them on an HTML element, which we are doing below. There is some additional code here to allow images to be reloaded to the div dynamically. We are also creating the trigger events for our navigation buttons and initializing the fancyBox plugin -
+                            p
+                                pre.prettyprint.
+                                    //Initialize Owl Carousel for images
+                                    $scope.initOwlCarousel = function(){
+                                        jQuery(document).ready(function () {
+                                            //Get owl element
+                                            var owl = jQuery('.owl-recent-works-v1');
+                                            //Get owl instance from element
+                                            var owlInstance = owl.data('owlCarousel');
+                                            //If instance is existing - reinit with new images
+                                            if(owlInstance != null){
+                                                owlInstance.reinit();
+                                                return;
+                                            }
+                                            //Initializer the owl carousel
+                                            owl.owlCarousel({
+                                                items: [4],
+                                                itemsDesktop : [1000,4],
+                                                itemsDesktopSmall : [900,3],
+                                                itemsTablet: [600,2],
+                                                itemsMobile : [479,1],
+                                                slideSpeed: 1000
+                                            });
+                                            // Custom Navigation Events
+                                            jQuery(".next-v2").click(function () {
+                                                owl.trigger('owl.next');
+                                            })
+                                            jQuery(".prev-v2").click(function () {
+                                                owl.trigger('owl.prev');
+                                            })
+                                            //Initialize the fancy box
+                                            FancyBox.initFancybox();
+                                        });
+                                    }
+                            p.
+                                We will call this function each time we receive a media response back from the API. To ensure we do not initialize the plugins until after the media data has been loaded, we are hooking into Angular's <a href='https://docs.angularjs.org/api/ng/service/$timeout', target='_blank'>$timeout</a> function -
+                            p
+                                pre.prettyprint.
+                                    ...
+                                    .then(function (json) {
+                                        //Get first 7 response results
+                                        if(json.data.data !== undefined){
+                                            $scope.media = json.data.data.slice(0, 7);
+                                            $timeout(function () {
+                                                //Initialize owl carousel after media has been loaded
+                                                $scope.initOwlCarousel();
+                                            });
+                                        }
+                            p.
+                                Now our application is not only useful, but looks good and provides more functionality to the user. We did this by taking advantage of the data provided to us by the Instagram API, along with the help of some jQuery plugins.
+
+
+    //-JS Implementing Plugins
+    script(type='text/javascript', src='/plugins/prettify.js')
+    script(type='text/javascript',src='/plugins/fancybox/source/jquery.fancybox.pack.js')
+    //-JS Page Level
+    script(type='text/javascript', src='/plugins/owl-carousel/owl-carousel/owl.carousel.min.js')
+    script(type='text/javascript',src='/javascripts/plugins/fancy-box.js')
+    script(type='text/javascript').
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http, $timeout) {
+            $scope.accessToken = '375282163.1677ed0.0592e3a5d55948daa7afef4623e29e03';
+            //Search for tag data
+            $scope.getTagData = function(){
+                $scope.message = null;
+                //Validate input
+                if($scope.searchQuery === undefined){
+                    $scope.message = "Please enter search criteria";
+                }
+                //Send http request to API
+                else{
+                    $http.jsonp('https://api.instagram.com/v1/tags/search?' +
+                                    'q=' + $scope.searchQuery +
+                                    '&access_token=' + $scope.accessToken +
+                                    '&callback=JSON_CALLBACK')
+                    .then(function(json){
+                        //Get first 5 response results
+                        if(json.data.data !== undefined){
+                            $scope.tags = json.data.data.slice(0, 5);
+                        }
+                        if (json.data.meta.error_message !== undefined) {
+                            $scope.message = json.data.meta.error_message;
+                        }
+                    });
+                }
+            }
+            //Get recent media with tag
+            $scope.getRecentMedia = function(tag){
+                $scope.searchTag = tag;
+                $http.jsonp('https://api.instagram.com/v1/tags/' + tag + '/media/recent?' +
+                        'access_token=' + $scope.accessToken +
+                        '&callback=JSON_CALLBACK')
+                    .then(function (json) {
+                        //Get first 7 response results
+                        if(json.data.data !== undefined){
+                            $scope.media = json.data.data.slice(0, 7);
+                            $timeout(function () {
+                                //Initialize owl carousel after media has been loaded
+                                $scope.initOwlCarousel();
+                            });
+                        }
+                        if(json.data.meta.error_message !== undefined){
+                            $scope.message = json.data.meta.error_message;
+                        }
+                    });
+            }
+            //Initialize Owl Carousel for images
+            $scope.initOwlCarousel = function(){
+                jQuery(document).ready(function () {
+                    //Get owl element
+                    var owl = jQuery('.owl-recent-works-v1');
+                    //Get owl instance from element
+                    var owlInstance = owl.data('owlCarousel');
+                    //If instance is existing - reinit with new images
+                    if(owlInstance != null){
+                        owlInstance.reinit();
+                        return;
+                    }
+                    //Initializer the owl carousel
+                    owl.owlCarousel({
+                        items: [4],
+                        itemsDesktop : [1000,4],
+                        itemsDesktopSmall : [900,3],
+                        itemsTablet: [600,2],
+                        itemsMobile : [479,1],
+                        slideSpeed: 1000
+                    });
+                    // Custom Navigation Events
+                    jQuery(".next-v2").click(function () {
+                        owl.trigger('owl.next');
+                    })
+                    jQuery(".prev-v2").click(function () {
+                        owl.trigger('owl.prev');
+                    })
+                    //Initialize the fancy box
+                    FancyBox.initFancybox();
+                });
+            }
+        });

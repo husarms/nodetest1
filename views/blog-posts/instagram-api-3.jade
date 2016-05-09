@@ -34,7 +34,7 @@ block content
                             p.
                                 <a href='/blog/posts/instagram-api-2'> Last time </a> we learned how to retrieve media data from the Instagram API and present it to our user. Now we will refine this presentation by allowing the user to swipe through thumbnails and see a full size version of each image -
                             div.one-page-inner.bg-light
-                                h3 Instagram API Demo - Refining the User Experience
+                                h3 <i class="fa fa-instagram"></i> Instagram API Demo - Refining the User Experience
                                 hr
                                 //-Step 1 - Search tags
                                 p
@@ -68,7 +68,7 @@ block content
                                         div.item(ng-repeat="item in media")
                                             a.fancybox.img-hover-v1(href='{{item.images.standard_resolution.url}}', rel='gallery1', title='{{item.caption.text}}')
                                                 span
-                                                    img.img-responsive(src='{{item.images.standard_resolution.url}}', alt='')
+                                                    img.img-responsive(ng-src='{{item.images.standard_resolution.url}}', alt='')
                             br
                             p.
                                 To achieve this we are using two different jQuery plugins -
@@ -91,9 +91,8 @@ block content
                                            &lt;h3&gt;Recent Media for \#{{searchTag}}&lt;/h3&gt;
                                         &lt;/div&gt;
                                         &lt;p&gt;
-                                            &lt;img class="img-responsive",
                                             ng-repeat="item in media",
-                                            src = "{{item.images.thumbnail.url}}",
+                                            ng-src = "{{item.images.thumbnail.url}}",
                                             alt="" /&gt;
                                         &lt;/p&gt;
                                     &lt;/div&gt;
@@ -117,7 +116,7 @@ block content
                                             &lt;div ng-repeat="item in media" class="item"&gt;
                                                 &lt;a href="{{item.images.standard_resolution.url}}" rel="gallery1" title="{{item.caption.text}}" class="fancybox img-hover-v1"&gt;
                                                     &lt;span&gt;
-                                                        &lt;img src="{{item.images.thumbnail.url}}" alt="" class="img-responsive"&gt;
+                                                        &lt;img ng-src="{{item.images.thumbnail.url}}" alt="" class="img-responsive"&gt;
                                                     &lt;/span&gt;
                                                 &lt;/a&gt;
                                             &lt;/div&gt;

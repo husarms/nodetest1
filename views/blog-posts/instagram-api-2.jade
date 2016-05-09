@@ -38,7 +38,7 @@ block content
                                 The end result allows the user to search for tags, then get recently uploaded images for each one -
 
                             div.one-page-inner.bg-light
-                                h3 Instagram API Demo - Get Recent Media
+                                h3 <i class="fa fa-instagram"></i> Instagram API Demo - Get Recent Media
                                 hr
                                 //-Step 1 - Search tags
                                 p
@@ -64,7 +64,7 @@ block content
                                     div.headline
                                         h3 Recent Media for \#{{searchTag}}
                                     p
-                                        img(ng-repeat="item in media", src='{{item.images.thumbnail.url}}', alt='')
+                                        img(ng-repeat="item in media", ng-src='{{item.images.thumbnail.url}}', alt='')
 
                             br
                             p.
@@ -172,12 +172,14 @@ block content
                                            &lt;h3&gt;Recent Media for \#{{searchTag}}&lt;/h3&gt;
                                         &lt;/div&gt;
                                         &lt;p&gt;
-                                            &lt;img class="img-responsive",
+                                            &lt;img
                                             ng-repeat="item in media",
-                                            src = "{{item.images.thumbnail.url}}",
+                                            ng-src = "{{item.images.thumbnail.url}}",
                                             alt="" /&gt;
                                         &lt;/p&gt;
                                     &lt;/div&gt;
+                            p.
+                                ** Note that we specify 'ng-src' rather than just 'src' with our image URLs. This prevents the browser from attempting to resolve the URL before Angular has a chance to evaluate it. Otherwise, the browser would attempt to GET the literal <code ng-non-bindable>"{{item.images.thumbnail.url}}"</code> as soon as the page loads - resulting in a 404 error.
                             p.
                                 Now we've created a basic, but useful application - an interface that allows users to retrieve content based on their interests. This is the main focus of many web applications - and we have achieved it with just two basic API interactions.
                             p.

@@ -1,0 +1,151 @@
+extends ../layout
+
+block content
+    style(text='text/css').
+        .map_container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+        }
+        .map_container .map_canvas {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+    div.breadcrumbs
+        div.container
+            a(href='/blog')
+                h1.pull-left Blog
+            ul.pull-right.breadcrumb
+                li
+                    a(href='/') Home
+                li
+                    a(href='/blog') Blog
+                li.active
+                    a(href='')=title
+    //-End Breadcrumbs
+    div.container.content-sm
+        div.news-v3.margin-bottom-60
+            div.news-v3-in.bg-color-darker.col-md-10.col-md-offset-1
+                div.row
+                    div.col-md-10.col-md-offset-1
+                        div(ng-app="myApp" ng-controller="myCtrl")
+                            h2.Title=title
+                                small &nbsp;(Getting Started)
+                            ul.list-inline.posted-info
+                                li Matt Husar
+                                li May 6, 2016
+                            hr
+                            p.
+                                How did the world survive before GPS-enabled smart phones and Google Maps?
+                            p.
+                                Location data is incredibly useful - so for this post I want to go through a basic example of using the <a href="https://developers.google.com/maps/">Google Maps API</a>. We will go through how to access the API, display a map on a page and allow for some basic user interaction.
+                            p.
+                                As with previous examples, we will be using <a href="https://angularjs.org/">AngularJS</a> (also brought to you by Google) to handle our front-end user interactions.
+                            p.
+                                The end result presents a Google map to the user (with all of it's built in functionality like zooming, dragging, map and satellite views, etc). In addition, the user can select a city from a drop down menu and the map will center on that location -
+                            div.one-page-inner.bg-light
+                                h3 <i class="fa fa-globe"></i> Google Maps API Demo - Go to Location
+                                hr
+                                //Location drop down
+                                p
+                                    div.form-group
+                                        label(for="locationsDropDown") Select a Location:
+                                        select.form-control(id="locationsDropDown"
+                                            ng-model="selectedLocation"
+                                            ng-options="location as location.name for location in locations"
+                                            ng-init="selectedLocation = locations[0]"
+                                            ng-change="goToLocation(selectedLocation)")
+                                //Google Map
+                                p
+                                    div.map_container
+                                        div.map_canvas(id="map")
+
+    //-JS Implementing Plugins
+    script(type='text/javascript', src='/plugins/prettify.js')
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyADonSbL0OVwRvtp3-eqgr7XPl2GxLZiEg')
+    //-JS Page Level
+    script(type='text/javascript').
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            //Create our location data
+            $scope.locations = [
+                {
+                    id: 1,
+                    name: "Tokyo",
+                    latitude: 35.689487,
+                    longitude: 139.691706
+                },
+                {
+                    id: 2,
+                    name: "London",
+                    latitude: 51.507351,
+                    longitude: -0.127758
+                },
+                {
+                    id: 3,
+                    name: "New York",
+                    latitude: 40.712784,
+                    longitude: -74.005941
+                },
+                {
+                    id: 4,
+                    name: "Hong Kong",
+                    latitude: 22.396428,
+                    longitude: 114.109497
+                },
+                {
+                    id: 5,
+                    name: "Paris",
+                    latitude: 48.856614,
+                    longitude: 2.352222
+                },
+                {
+                    id: 6,
+                    name: "Singapore",
+                    latitude: 1.352083,
+                    longitude: 103.819836
+                },
+                {
+                    id: 7,
+                    name: "Shanghai",
+                    latitude: 31.230416,
+                    longitude: 121.473701
+                },
+                {
+                    id: 8,
+                    name: "Dubai",
+                    latitude: 25.204849,
+                    longitude: 55.270783
+                },
+                {
+                    id: 9,
+                    name: "Sydney",
+                    latitude: -33.867487,
+                    longitude: 151.206990
+                },
+                {
+                    id: 10,
+                    name: "Beijing",
+                    latitude: 39.904211,
+                    longitude: 116.407395
+                }
+            ]
+
+            //Create map centered on latitude and longitude of location
+            $scope.goToLocation = function (location) {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: location.latitude, lng: location.longitude},
+                    zoom: 8
+                });
+            }
+
+            //Initialize for the first time on load
+            $scope.goToLocation($scope.locations[0]);
+        });
+
+

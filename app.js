@@ -24,6 +24,7 @@ var blogPostAudioVisualizer = require('./routes/blog-posts/audio-visualizer');
 var blogPostInstagramAPI1 = require('./routes/blog-posts/instagram-api-1');
 var blogPostInstagramAPI2 = require('./routes/blog-posts/instagram-api-2');
 var blogPostInstagramAPI3 = require('./routes/blog-posts/instagram-api-3');
+var blogPostGoogleMapsAPI1 = require('./routes/blog-posts/google-maps-api-1');
 
 var app = express();
 
@@ -61,6 +62,7 @@ app.use('/blog/posts/audio-visualizer',blogPostAudioVisualizer);
 app.use('/blog/posts/instagram-api-1',blogPostInstagramAPI1);
 app.use('/blog/posts/instagram-api-2',blogPostInstagramAPI2);
 app.use('/blog/posts/instagram-api-3',blogPostInstagramAPI3);
+app.use('/blog/posts/google-maps-api-1',blogPostGoogleMapsAPI1);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -67,6 +67,7 @@ block content
                                         img(ng-repeat="item in media", ng-src='{{item.images.thumbnail.url}}', alt='')
 
                             br
+                            h3 Get Recent Media by Tag Name
                             p.
                                 The first piece - searching for tags - should look familiar. If not, please check out the <a href='/blog/posts/instagram-api-1'> previous post </a> on the Instagram API. We are going to added a 3rd column to our search results with a link that will retrieve recent media for our tag -
                             p
@@ -99,6 +100,8 @@ block content
                                             'access_token=' + $scope.accessToken +
                                             '&callback=JSON_CALLBACK')
                                         ...
+                            br
+                            h3 Displaying Media Data
                             p.
                                 We will again chain a function after the request to handle the JSON response. We are assigning the response - an array of "media" objects - to a scope variable. We are also limiting what we display to the first 4 objects -
                             p

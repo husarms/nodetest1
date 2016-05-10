@@ -82,8 +82,10 @@ block content
                                 tr
                                     td <a href="http://fancyapps.com/fancybox/" target="_blank">fancyBox</a>
                                     td Adds zooming functionality and a lightbox effect
+                            br
+                            h3 Updating our HTML for Owl Carousel and fancyBox
                             p.
-                                To create the structure for the carousel slider we will replace the following div of thumbnail images from the previous post...
+                                To create the structure for these plugins we will replace the following div of thumbnail images from the previous post...
                             p
                                 pre.prettyprint(ng-non-bindable).
                                     &lt;div ng-show="media"&gt;
@@ -122,6 +124,8 @@ block content
                                             &lt;/div&gt;
                                         &lt;/div&gt;
                                     &lt;/div&gt;
+                            br
+                            h3 Initializing the Plugins
                             p.
                                 Most jQuery plugins require you to 'initialize' them on an HTML element, which we are doing below. There is some additional code here to allow images to be reloaded to the div dynamically. We are also creating the trigger events for our navigation buttons and initializing the fancyBox plugin -
                             p

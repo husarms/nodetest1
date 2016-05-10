@@ -2,6 +2,12 @@ extends ../layout
 
 block content
     style(text='text/css').
+        pre.prettyprint {
+            border: 1px solid #ccc;
+            margin-bottom: 0;
+            padding: 9.5px;
+            white-space: pre-wrap;
+        }
         .map_container {
             position: relative;
             width: 100%;
@@ -38,7 +44,7 @@ block content
                                 small &nbsp;(Getting Started)
                             ul.list-inline.posted-info
                                 li Matt Husar
-                                li May 6, 2016
+                                li May 9, 2016
                             hr
                             p.
                                 How did the world survive before GPS-enabled smart phones and Google Maps?
@@ -64,6 +70,136 @@ block content
                                 p
                                     div.map_container
                                         div.map_canvas(id="map")
+                            br
+                            h3 Getting an API Key
+                            p.
+                                Before getting started we will need to obtain an API key from Google. If you checkout the <a href="https://developers.google.com/maps/documentation/api-picker" target="_blank">Google Maps Developer page</a>, their are actually several different APIs to choose from, each catered to specific platforms and functionality. For this example we will be using the <a href="https://developers.google.com/maps/documentation/javascript/" target="_blank">Google Maps Javascript API</a>.
+                            p.
+                                Obtaining a key requires a Google account - then it's as simple as choosing which API you want to use and "activating" it for a project. You will be issued a key which will be included in the URL for the API -
+                            p
+                                pre.prettyprint.
+                                    https://maps.googleapis.com/maps/api/js?key=AIzaSyADonSbL0OVwRvtp3-eqgr7XPl2GxLZiEg
+                            p.
+                                If you go to this URL in a browser you will notice it returns a Javascript library. We will be calling functions within this library, rather than making direct requests to web services like we did with the <a href="/blog/posts/instagram-api-1">Instagram API</a>.
+                            br
+                            h3 Displaying a Map on Page
+                            p.
+                                Displaying a map on a page is fairly straightforward. We will add a div as a container for our map, reference the Javascript API URL above, the use a Javascript function to initialize a map in our div. The Hello World example below comes directly from <a href="https://developers.google.com/maps/documentation/javascript/tutorial#The_Hello_World_of_Google_Maps_v3" target="_blank">Google's API Documentation</a> -
+                            p
+                                pre.prettyprint.
+                                    &lt;!DOCTYPE html&gt;
+                                    &lt;html&gt;
+                                        &lt;head&gt;
+                                            &lt;title&gt;Simple Map&lt;/title&gt;
+                                            &lt;meta name="viewport" content="initial-scale=1.0"&gt;
+                                            &lt;meta charset="utf-8"&gt;
+                                            &lt;style&gt;
+                                                html, body {
+                                                    height: 100%;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                }
+                                                #map{
+                                                    height: 100%;
+                                                }
+                                            &lt;/style&gt;
+                                        &lt;/head&gt;
+                                        &lt;body&gt;
+                                            &lt;div id="map"&gt;&lt;/div&gt;
+                                            &lt;script&gt;
+                                                var map;
+                                                function initMap() {
+                                                    map = new google.maps.Map(document.getElementById('map'), {
+                                                        center: {lat: -34.397, lng: 150.644},
+                                                        zoom: 8
+                                                    });
+                                                }
+                                            &lt;/script&gt;
+                                            &lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADonSbL0OVwRvtp3-eqgr7XPl2GxLZiEg&callback=initMap"
+                                                async defer&gt;&lt;/script&gt;
+                                        &lt;/body&gt;
+                                    &lt;/html&gt;
+                            p.
+                            br
+                            h3 Making it Responsive
+                            p.
+                                You'll notice the Hello World example is not responsive - what if we want the map to resize automatically for any device? As always, <a href="stackoverflow.com" target="_blank">Stack Overflow</a> is your friend, and <a href="http://stackoverflow.com/questions/15668762/google-maps-with-bootstrap-not-responsive">this post</a> has some good examples of how to make responsive maps.
+                            p.
+                                We will add the following two CSS classes -
+                            p
+                                pre.prettyprint.
+                                    .map_container {
+                                        position: relative;
+                                        width: 100%;
+                                        padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+                                    }
+                                    .map_container .map_canvas {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+                            p.
+                                Then update our HTML to reference them and our maps will now be responsive -
+                            p
+                                pre.prettyprint.
+                                    &lt;div class="map_container"&gt;
+                                        &lt;div id="map" class="map_canvas"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                            br
+                            h3 Interacting with the Map
+                            p.
+                                We have responsive maps on our page, but how can we add some custom interactions with Angular? Let's add a list of cities that the user can choose from, then have our map center on the selected city.
+                            p.
+                                First we will define the locations of our cities. Google maps uses latitude and longitude (basically X & Y coordinates) to pin point locations, so we will define them for each city -
+                            p
+                                pre.prettyprint.
+                                    app.controller('myCtrl', function ($scope) {
+                                        //Create our location data
+                                        $scope.locations = [
+                                            {
+                                                id: 1,
+                                                name: "Tokyo",
+                                                latitude: 35.689487,
+                                                longitude: 139.691706
+                                            },
+                                            {
+                                                id: 2,
+                                                name: "London",
+                                                latitude: 51.507351,
+                                                longitude: -0.127758
+                                            },
+                                            {
+                                                id: 3,
+                                                name: "New York",
+                                                latitude: 40.712784,
+                                                longitude: -74.005941
+                                            },
+                                            ...
+                            p.
+                               We then want to create a select list for these locations in our HTML -
+                            p
+                                pre.prettyprint.
+                                    &lt;div class="form-group"&gt;
+                                        &lt;label for="locationsDropDown"&gt;Select a Location:&lt;/label&gt;
+                                        &lt;select id="locationsDropDown"
+                                            class="form-control"
+                                            ng-model="selectedLocation"
+                                            ng-options="location as location.name for location in locations"
+                                            ng-init="selectedLocation = locations[0]"
+                                            ng-change="goToLocation(selectedLocation)" &gt;
+                                        &lt;/select&gt;
+                                    &lt;/div&gt;
+                            p.
+                                A lot of Angular-stuff going on here.
+
+
+
+
+
 
     //-JS Implementing Plugins
     script(type='text/javascript', src='/plugins/prettify.js')

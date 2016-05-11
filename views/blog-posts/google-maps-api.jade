@@ -41,7 +41,6 @@ block content
                     div.col-md-10.col-md-offset-1
                         div(ng-app="myApp" ng-controller="myCtrl")
                             h2.Title=title
-                                small &nbsp;(Getting Started)
                             ul.list-inline.posted-info
                                 li Matt Husar
                                 li May 9, 2016
@@ -84,7 +83,7 @@ block content
                             br
                             h3 Displaying a Map on Page
                             p.
-                                Displaying a map on a page is fairly straightforward. We will add a div as a container for our map, reference the Javascript API URL above, the use a Javascript function to initialize a map in our div. The Hello World example below comes directly from <a href="https://developers.google.com/maps/documentation/javascript/tutorial#The_Hello_World_of_Google_Maps_v3" target="_blank">Google's API Documentation</a> -
+                                Displaying a map on a page is fairly straightforward. We will add a div as a container for our map, reference the Javascript API URL above, then use a Javascript function to initialize a map in our div. The Hello World example below comes directly from <a href="https://developers.google.com/maps/documentation/javascript/tutorial#The_Hello_World_of_Google_Maps_v3" target="_blank">Google's API Documentation</a> -
                             p
                                 pre.prettyprint.
                                     &lt;!DOCTYPE html&gt;
@@ -123,7 +122,7 @@ block content
                             br
                             h3 Making it Responsive
                             p.
-                                You'll notice the Hello World example is not responsive - what if we want the map to resize automatically for any device? As always, <a href="stackoverflow.com" target="_blank">Stack Overflow</a> is your friend, and <a href="http://stackoverflow.com/questions/15668762/google-maps-with-bootstrap-not-responsive">this post</a> has some good examples of how to make responsive maps.
+                                You'll notice the example above is not responsive - what if we want the map to resize automatically for any device? As always, <a href="stackoverflow.com" target="_blank">Stack Overflow</a> is your friend, and <a href="http://stackoverflow.com/questions/15668762/google-maps-with-bootstrap-not-responsive">this post</a> has some good examples of how to make maps work with a responsive design.
                             p.
                                 We will add the following two CSS classes -
                             p
@@ -143,18 +142,20 @@ block content
                                         padding: 0;
                                     }
                             p.
-                                Then update our HTML to reference them and our maps will now be responsive -
+                                Then update our HTML to reference them -
                             p
                                 pre.prettyprint.
                                     &lt;div class="map_container"&gt;
                                         &lt;div id="map" class="map_canvas"&gt;&lt;/div&gt;
                                     &lt;/div&gt;
+                            p.
+                                ...and voila our maps will adjust to different screen sizes - maintaining the ideal width to height ratio of 16:9 that we specified in our CSS.
                             br
                             h3 Interacting with the Map
                             p.
-                                We have responsive maps on our page, but how can we add some custom interactions with Angular? Let's add a list of cities that the user can choose from, then have our map center on the selected city.
+                                So we have responsive maps on our page, but how can we add custom interactions? For the sake of example, let's add a list of cities that the user can select from - then have our map center on the location of that city.
                             p.
-                                First we will define the locations of our cities. Google maps uses latitude and longitude (basically X & Y coordinates) to pin point locations, so we will define them for each city -
+                                Google maps uses latitude and longitude (think X & Y coordinates) to pin point locations. To define our cities, let's create an array of "location" objects - each with an id, name, and coordinates -
                             p
                                 pre.prettyprint.
                                     app.controller('myCtrl', function ($scope) {
@@ -180,7 +181,7 @@ block content
                                             },
                                             ...
                             p.
-                               We then want to create a select list for these locations in our HTML -
+                               Then we want to present the list of locations to our user in a drop down menu -
                             p
                                 pre.prettyprint.
                                     &lt;div class="form-group"&gt;
@@ -194,7 +195,29 @@ block content
                                         &lt;/select&gt;
                                     &lt;/div&gt;
                             p.
-                                A lot of Angular-stuff going on here.
+                                A lot of Angular-stuff going on here. To break it down -
+                            ul
+                                li <strong>ng-model</strong> - our model will be the currently selected location object
+                                li <strong>ng-options</strong> - our array of locations, but only display the location name
+                                li <strong>ng-init</strong> - initialize our selected location to the first location object in our array
+                                li <strong>ng-change</strong> - set a function to call when the selected option changes
+                            p.
+                                When the goToLocation() function is called during the ng-change event - it will take the latitude and longitude coordinates of our selected city and create a new map centered on that location -
+                            p
+                                pre.prettyprint.
+                                    //Create map centered on latitude and longitude of location
+                                    $scope.goToLocation = function (location) {
+                                        var map = new google.maps.Map(document.getElementById('map'), {
+                                            center: {lat: location.latitude, lng: location.longitude},
+                                            zoom: 8
+                                        });
+                                    }
+                            br
+                            h3 Conclusion
+                            p.
+                                We've learned how to render a Google map on a responsive web page, as well as how we can add our own custom interactions to enhance its functionality.
+                            p.
+                                As we saw in the intro, there are several other APIs to explore. Wouldn't it be cool if we could use location data to help the user discover new information? Lookout for a future post where we will take a look at the <a href="https://developers.google.com/places/web-service/" target="_blank">Google Places API</api>
 
 
 

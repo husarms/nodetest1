@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.renderPjax('blog-posts/google-maps-api-1', { title: 'Google Maps API - Part 1' });
+    res.renderPjax('blog-posts/google-maps-api', { title: 'Google Maps API' });
 });
 
 module.exports = router;

@@ -25,6 +25,7 @@ var blogPostInstagramAPI1 = require('./routes/blog-posts/instagram-api-1');
 var blogPostInstagramAPI2 = require('./routes/blog-posts/instagram-api-2');
 var blogPostInstagramAPI3 = require('./routes/blog-posts/instagram-api-3');
 var blogPostGoogleMapsAPI = require('./routes/blog-posts/google-maps-api');
+var blogPostCentralHighSchool = require('./routes/blog-posts/central-high-school');
 
 var app = express();
 
@@ -63,6 +64,7 @@ app.use('/blog/posts/instagram-api-1',blogPostInstagramAPI1);
 app.use('/blog/posts/instagram-api-2',blogPostInstagramAPI2);
 app.use('/blog/posts/instagram-api-3',blogPostInstagramAPI3);
 app.use('/blog/posts/google-maps-api',blogPostGoogleMapsAPI);
+app.use('/blog/posts/central-high-school',blogPostCentralHighSchool);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
